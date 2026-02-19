@@ -456,6 +456,27 @@
             flex-shrink: 0;
         }
 
+        .practice-icon-photo {
+            width: 100%;
+            height: 200px;
+            border-radius: 6px;
+            overflow: hidden;
+            margin-bottom: 22px;
+        }
+
+        .practice-icon-photo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+
+        .practice-card:hover .practice-icon-photo img {
+            transform: scale(1.04);
+        }
+
         .practice-card h3 {
             font-family: 'Playfair Display', serif;
             font-size: 1.6rem;
@@ -990,7 +1011,9 @@
 
         <!-- Car Accidents -->
         <div class="practice-card fade-in">
-            <div class="practice-icon-circle">🚗</div>
+            <div class="practice-icon-photo">
+                <img src="car_crash_with_ambulance.jpeg" alt="Car accident scene with ambulance responding" loading="lazy">
+            </div>
             <h3>Car Accidents</h3>
             <p>We handle all types of motor vehicle collisions, from fender benders to catastrophic crashes. Our team investigates every detail to build the strongest possible case for maximum compensation.</p>
             <a href="car-accident-injuries.html" class="learn-more">Learn More &rarr;</a>
