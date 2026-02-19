@@ -1,7 +1,31 @@
 {
   "permissions": {
     "allow": [
-      "Bash(python3:*)"
+      "Bash(python3:*)",
+      "Bash(grep:*)",
+      "Bash(cd:*)",
+      "Bash(for file in wrongful-death-claims.html dean-camper-logo-main.png)",
+      "Bash(do if [ -f \"$file\" ])",
+      "Bash(then echo \"EXISTS: $file\")",
+      "Bash(else echo \"MISSING: $file\")",
+      "Bash(fi:*)",
+      "Bash(done)",
+      "Bash(ls:*)",
+      "Bash(for logo in \"dean-camper-logo-large.png\" \"dean-camper-logo-large.webp\" \"dean-camper-logo-main.png\" \"dean-camper-logo-medium.png\" \"dean-camper-logo-medium.webp\" \"dean-camper-logo-small.webp\")",
+      "Bash(do echo \"=== $logo ===\")",
+      "Bash(git add:*)",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nFix broken links, missing images, and placeholder URLs across site\n\n- Fix dean-camper-logo-main.png → dean-camper-logo.png in 9 practice area pages \\(image was missing\\)\n- Fix wrongful-death-claims.html → wrongful-death.html in 6 footer/nav links and wrongful-death.html OG URL\n- Fix deanandcamper.com → deancamper.com in contact.html \\(canonical, OG tags, JSON-LD, email\\)\n- Fix yoursite.com placeholder canonical URLs in 5 location pages and header-with-logo.html\n- Fix mobile_al page: was duplicated FWB content; corrected title, description, canonical, and body content for Mobile AL\n- Simplify header-with-logo.html logo srcset to remove references to non-existent size variants\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git commit -m \"$\\(cat <<''EOF''\nAdd homepage index.html with all 10 practice area cards\n\n- Full sticky header with top phone bar \\(all 4 numbers\\) and dropdown nav\n- Hero section with stats \\($50M+, 25+ years, 500+ cases, 5 offices\\)\n- Trust bar \\(Super Lawyers, Multi-Million Dollar Advocates, No Fee pledge\\)\n- 10 individual practice area cards, each linking to the correct page:\n  Car, Truck, Motorcycle, Boat, Wrongful Death, Premises Liability,\n  Defective Products, Dog Bites, Auto Insurance Claims, Other Injuries\n- Why Choose Us section \\(4 feature blocks\\)\n- Verdicts & Settlements results grid\n- Attorney cards for Shane Dean and Chad Camper with credentials\n- 5-location office grid linking to each city page\n- Contact CTA with all 4 phone numbers and contact.html link\n- Full footer with all practice area, firm, location, and phone links\n- JSON-LD LegalService schema, Open Graph, Twitter Card, geo meta tags\n- Mobile-responsive with hamburger menu and scroll fade-in animations\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>\nEOF\n\\)\")",
+      "Bash(git push:*)",
+      "Bash(gh auth status:*)",
+      "Bash(git remote:*)",
+      "Bash(git config:*)",
+      "Bash(GIT_ASKPASS=/bin/true git push:*)",
+      "Bash(~/.ssh/config << 'EOF'\n\nHost github-personal\n    HostName github.com\n    User git\n    IdentityFile ~/.ssh/id_github_personal\n    IdentitiesOnly yes\nEOF)",
+      "Bash(ssh:*)",
+      "Bash(git commit:*)",
+      "Bash(xargs:*)",
+      "Bash(find:*)"
     ]
   }
 }
