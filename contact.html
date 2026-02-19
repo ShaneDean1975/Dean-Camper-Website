@@ -451,23 +451,56 @@
     <a href="#main-content" class="visually-hidden">Skip to main content</a>
     
     <!-- Header -->
-    <header class="site-header" role="banner">
-        <div class="header-container">
-            <a href="index.html" class="logo-link" aria-label="Dean & Camper P.A. - Return to Homepage">
+    <header class="site-header">
+    <div class="site-header-top">
+        <p>
+            <a href="tel:8504333077">Pensacola: (850) 433-3077</a> &nbsp;|&nbsp;
+            <a href="tel:8507963077">Fort Walton Beach: (850) 796-3077</a> &nbsp;|&nbsp;
+            <a href="tel:8502697105">Destin: (850) 269-7105</a> &nbsp;|&nbsp;
+            <a href="tel:2512830577">Mobile: (251) 283-0577</a>
+            &nbsp;&nbsp;&middot;&nbsp;&nbsp; Free Consultation &nbsp;|&nbsp; No Fees Unless We Win
+        </p>
+    </div>
+    <nav>
+        <div class="site-nav-container">
+            <a href="index.html" class="site-logo-link" aria-label="Dean &amp; Camper P.A. &mdash; Home">
                 <picture>
-                    <source 
-                        srcset="dean-camper-logo.webp"
-                        type="image/webp">
-                    <img 
-                        src="dean-camper-logo.png"
-                        alt="Dean & Camper P.A. - Florida Personal Injury Attorneys" 
-                        class="logo-image"
-                        width="200"
-                        height="60">
+                    <source srcset="dean-camper-logo.webp" type="image/webp">
+                    <img src="dean-camper-logo.png" alt="Dean &amp; Camper P.A. Injury Lawyers" height="58">
                 </picture>
             </a>
+            <button class="site-mobile-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <ul class="site-nav-links" id="siteMainNav">
+                <li><a href="index.html">Home</a></li>
+                <li class="site-dropdown">
+                    <a href="index.html#practice-areas">Practice Areas &#9662;</a>
+                    <ul class="site-dropdown-menu">
+                        <li><a href="car-accident-injuries.html">Car Accidents</a></li>
+                        <li><a href="truck-accident-injuries.html">Truck Accidents</a></li>
+                        <li><a href="motorcycle-accident-injuries.html">Motorcycle Accidents</a></li>
+                        <li><a href="boat-accident-injuries.html">Boat Accidents</a></li>
+                        <li><a href="wrongful-death.html">Wrongful Death</a></li>
+                        <li><a href="premises-liability.html">Premises Liability</a></li>
+                        <li><a href="defective-product-injuries.html">Product Liability</a></li>
+                        <li><a href="dog-bite-injuries.html">Dog Bite Injuries</a></li>
+                        <li><a href="auto-insurance-claims.html">Insurance Claims</a></li>
+                        <li><a href="other-personal-injuries.html">Other Personal Injuries</a></li>
+                    </ul>
+                </li>
+                <li class="site-dropdown">
+                    <a href="index.html#attorneys">Our Attorneys &#9662;</a>
+                    <ul class="site-dropdown-menu">
+                        <li><a href="shane-dean.html">Shane Dean</a></li>
+                        <li><a href="chad-camper.html">Chad Camper</a></li>
+                    </ul>
+                </li>
+                <li><a href="car-accident-faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="site-btn-nav">Free Consultation</a></li>
+            </ul>
         </div>
-    </header>
+    </nav>
+</header>
     
     <!-- Hero Section -->
     <section class="contact-hero">
@@ -671,5 +704,28 @@
             }
         });
     </script>
+
+<script>
+(function() {
+    var toggle = document.querySelector('.site-mobile-toggle');
+    var nav = document.getElementById('siteMainNav');
+    var dropdowns = document.querySelectorAll('.site-dropdown');
+    if (toggle && nav) {
+        toggle.addEventListener('click', function() { nav.classList.toggle('active'); });
+    }
+    if (window.innerWidth <= 968) {
+        dropdowns.forEach(function(dd) {
+            var link = dd.querySelector('a');
+            if (link) {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    dd.classList.toggle('active');
+                });
+            }
+        });
+    }
+})();
+</script>
+
 </body>
 </html>

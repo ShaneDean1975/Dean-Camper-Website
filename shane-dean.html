@@ -331,9 +331,178 @@
                 font-size: 2rem;
             }
         }
-    </style>
+    
+        /* ===== STANDARD SITE HEADER ===== */
+        body { margin: 0; padding: 0; }
+        .site-header {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: #0A1F3D;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.18);
+            font-family: 'Work Sans', sans-serif;
+        }
+        .site-header-top {
+            background: linear-gradient(135deg, #050F1C 0%, #0A1F3D 100%);
+            padding: 0.55rem 2rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+        .site-header-top p { color: rgba(255,255,255,0.9); margin: 0; }
+        .site-header-top a { color: #D4AF37; text-decoration: none; font-weight: 600; }
+        .site-header-top a:hover { color: #E8C96A; }
+        .site-nav-container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0.75rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .site-logo-link { display: flex; align-items: center; text-decoration: none; }
+        .site-logo-link picture img { max-height: 58px; width: auto; display: block; }
+        .site-nav-links {
+            display: flex;
+            list-style: none;
+            gap: 1.4rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+        .site-nav-links > li { position: relative; }
+        .site-nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.93rem;
+            padding: 0.45rem 0;
+            transition: color 0.3s;
+        }
+        .site-nav-links a:hover { color: #D4AF37; }
+        .site-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 0.5rem);
+            left: 0;
+            background: white;
+            min-width: 230px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+            border-radius: 4px;
+            padding: 0.4rem 0;
+            list-style: none;
+            z-index: 1001;
+        }
+        .site-dropdown:hover .site-dropdown-menu { display: block; }
+        .site-dropdown-menu a {
+            color: #1A1A1A;
+            padding: 0.65rem 1.2rem;
+            display: block;
+            font-size: 0.88rem;
+            font-weight: 400;
+        }
+        .site-dropdown-menu a:hover { background: #F8F6F1; color: #0A1F3D; }
+        .site-btn-nav {
+            background: #D4AF37 !important;
+            color: #0A1F3D !important;
+            padding: 0.55rem 1.4rem !important;
+            border-radius: 4px;
+            font-weight: 600 !important;
+        }
+        .site-btn-nav:hover { background: #E8C96A !important; transform: translateY(-2px); }
+        .site-mobile-toggle {
+            display: none;
+            background: none;
+            border: none;
+            color: white;
+            font-size: 1.6rem;
+            cursor: pointer;
+            line-height: 1;
+        }
+        @media (max-width: 968px) {
+            .site-mobile-toggle { display: block; }
+            .site-nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: #0A1F3D;
+                flex-direction: column;
+                padding: 0.75rem 0;
+                gap: 0;
+            }
+            .site-nav-links.active { display: flex; }
+            .site-nav-links > li { width: 100%; }
+            .site-nav-links a {
+                display: block;
+                padding: 0.85rem 1.5rem;
+                border-bottom: 1px solid rgba(255,255,255,0.07);
+            }
+            .site-dropdown-menu {
+                position: static;
+                display: none;
+                box-shadow: none;
+                background: rgba(0,0,0,0.22);
+                border-radius: 0;
+                margin-top: 0;
+            }
+            .site-dropdown.active .site-dropdown-menu { display: block; }
+            .site-dropdown-menu a { color: rgba(255,255,255,0.85); padding-left: 2.5rem; }
+            .site-dropdown-menu a:hover { background: rgba(255,255,255,0.05); color: #D4AF37; }
+        }
+</style>
 </head>
 <body>
+<header class="site-header">
+    <div class="site-header-top">
+        <p>
+            <a href="tel:8504333077">Pensacola: (850) 433-3077</a> &nbsp;|&nbsp;
+            <a href="tel:8507963077">Fort Walton Beach: (850) 796-3077</a> &nbsp;|&nbsp;
+            <a href="tel:8502697105">Destin: (850) 269-7105</a> &nbsp;|&nbsp;
+            <a href="tel:2512830577">Mobile: (251) 283-0577</a>
+            &nbsp;&nbsp;&middot;&nbsp;&nbsp; Free Consultation &nbsp;|&nbsp; No Fees Unless We Win
+        </p>
+    </div>
+    <nav>
+        <div class="site-nav-container">
+            <a href="index.html" class="site-logo-link" aria-label="Dean &amp; Camper P.A. &mdash; Home">
+                <picture>
+                    <source srcset="dean-camper-logo.webp" type="image/webp">
+                    <img src="dean-camper-logo.png" alt="Dean &amp; Camper P.A. Injury Lawyers" height="58">
+                </picture>
+            </a>
+            <button class="site-mobile-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <ul class="site-nav-links" id="siteMainNav">
+                <li><a href="index.html">Home</a></li>
+                <li class="site-dropdown">
+                    <a href="index.html#practice-areas">Practice Areas &#9662;</a>
+                    <ul class="site-dropdown-menu">
+                        <li><a href="car-accident-injuries.html">Car Accidents</a></li>
+                        <li><a href="truck-accident-injuries.html">Truck Accidents</a></li>
+                        <li><a href="motorcycle-accident-injuries.html">Motorcycle Accidents</a></li>
+                        <li><a href="boat-accident-injuries.html">Boat Accidents</a></li>
+                        <li><a href="wrongful-death.html">Wrongful Death</a></li>
+                        <li><a href="premises-liability.html">Premises Liability</a></li>
+                        <li><a href="defective-product-injuries.html">Product Liability</a></li>
+                        <li><a href="dog-bite-injuries.html">Dog Bite Injuries</a></li>
+                        <li><a href="auto-insurance-claims.html">Insurance Claims</a></li>
+                        <li><a href="other-personal-injuries.html">Other Personal Injuries</a></li>
+                    </ul>
+                </li>
+                <li class="site-dropdown">
+                    <a href="index.html#attorneys">Our Attorneys &#9662;</a>
+                    <ul class="site-dropdown-menu">
+                        <li><a href="shane-dean.html">Shane Dean</a></li>
+                        <li><a href="chad-camper.html">Chad Camper</a></li>
+                    </ul>
+                </li>
+                <li><a href="car-accident-faq.html">FAQ</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="contact.html" class="site-btn-nav">Free Consultation</a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
     <!-- Navigation -->
     <nav>
         <div class="nav-container">
