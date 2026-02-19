@@ -558,34 +558,81 @@
 
         /* ===== RESULTS ===== */
         .results {
-            padding: 80px 40px;
+            padding: 80px 0;
             background: var(--cream);
         }
 
-        .results-grid {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(185px, 1fr));
+        .results .section-header {
+            padding: 0 40px;
+        }
+
+        .results-scroll-wrap {
+            overflow: hidden;
+            margin-top: 40px;
+            position: relative;
+        }
+
+        .results-scroll-wrap::before,
+        .results-scroll-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            width: 80px;
+            z-index: 2;
+            pointer-events: none;
+        }
+
+        .results-scroll-wrap::before {
+            left: 0;
+            background: linear-gradient(to right, var(--cream), transparent);
+        }
+
+        .results-scroll-wrap::after {
+            right: 0;
+            background: linear-gradient(to left, var(--cream), transparent);
+        }
+
+        .results-track {
+            display: inline-flex;
             gap: 16px;
+            padding: 8px 16px;
+            animation: resultsScroll 30s linear infinite;
+            white-space: nowrap;
+        }
+
+        .results-track:hover {
+            animation-play-state: paused;
+        }
+
+        @keyframes resultsScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
         }
 
         .result-card {
             background: var(--white);
-            padding: 24px 20px;
+            padding: 28px 28px;
             border-radius: 6px;
             border: 1px solid rgba(10,31,61,0.1);
             transition: all 0.3s;
+            flex-shrink: 0;
+            width: 210px;
+            display: inline-block;
+            white-space: normal;
+            vertical-align: top;
+            cursor: default;
         }
 
         .result-card:hover {
             border-color: var(--gold);
             box-shadow: 0 6px 22px rgba(0,0,0,0.08);
+            transform: translateY(-3px);
         }
 
         .result-amount {
             font-family: 'Playfair Display', serif;
-            font-size: 1.65rem;
+            font-size: 1.75rem;
             color: var(--primary-navy);
             font-weight: 700;
             margin-bottom: 8px;
@@ -1207,34 +1254,78 @@
         <p class="section-subtitle">Our track record speaks for itself. We've recovered millions for injury victims across the Gulf Coast.</p>
     </div>
 
-    <div class="results-grid">
-        <div class="result-card fade-in">
-            <div class="result-amount">$3.5M</div>
-            <div class="result-case">Product Liability Wrongful Death</div>
-        </div>
-        <div class="result-card fade-in">
-            <div class="result-amount">$1.85M</div>
-            <div class="result-case">Auto Accident Wrongful Death</div>
-        </div>
-        <div class="result-card fade-in">
-            <div class="result-amount">$1M</div>
-            <div class="result-case">Pedestrian Struck By Vehicle</div>
-        </div>
-        <div class="result-card fade-in">
-            <div class="result-amount">$850K</div>
-            <div class="result-case">Product Liability Claim</div>
-        </div>
-        <div class="result-card fade-in">
-            <div class="result-amount">$675K</div>
-            <div class="result-case">Auto Accident Injury Claim</div>
-        </div>
-        <div class="result-card fade-in">
-            <div class="result-amount">$650K</div>
-            <div class="result-case">Auto Accident Injury Claim</div>
+    <div class="results-scroll-wrap">
+        <div class="results-track">
+            <!-- Set 1 -->
+            <div class="result-card">
+                <div class="result-amount">$3.5M</div>
+                <div class="result-case">Product Liability Wrongful Death</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$1.85M</div>
+                <div class="result-case">Auto Accident Wrongful Death</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$1M</div>
+                <div class="result-case">Pedestrian Struck By Vehicle</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$850K</div>
+                <div class="result-case">Product Liability Claim</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$675K</div>
+                <div class="result-case">Auto Accident Injury Claim</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$650K</div>
+                <div class="result-case">Auto Accident Injury Claim</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$500K</div>
+                <div class="result-case">Premises Liability Injury</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$425K</div>
+                <div class="result-case">Motorcycle Accident Injury</div>
+            </div>
+            <!-- Set 2 — duplicate for seamless loop -->
+            <div class="result-card">
+                <div class="result-amount">$3.5M</div>
+                <div class="result-case">Product Liability Wrongful Death</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$1.85M</div>
+                <div class="result-case">Auto Accident Wrongful Death</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$1M</div>
+                <div class="result-case">Pedestrian Struck By Vehicle</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$850K</div>
+                <div class="result-case">Product Liability Claim</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$675K</div>
+                <div class="result-case">Auto Accident Injury Claim</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$650K</div>
+                <div class="result-case">Auto Accident Injury Claim</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$500K</div>
+                <div class="result-case">Premises Liability Injury</div>
+            </div>
+            <div class="result-card">
+                <div class="result-amount">$425K</div>
+                <div class="result-case">Motorcycle Accident Injury</div>
+            </div>
         </div>
     </div>
 
-    <p style="text-align:center; margin-top:36px; color:var(--text-gray); font-size:0.85rem;">
+    <p style="text-align:center; margin-top:28px; padding: 0 40px; color:var(--text-gray); font-size:0.85rem;">
         Prior results do not guarantee a similar outcome. Each case is unique and results depend on the specific facts and circumstances.
     </p>
 </section>

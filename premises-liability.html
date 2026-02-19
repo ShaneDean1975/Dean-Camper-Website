@@ -3,548 +3,294 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Premises Liability Attorneys | Dean & Camper P.A. - Florida & Alabama</title>
-    <meta name="description" content="Experienced premises liability attorneys at Dean & Camper, P.A. helping injury victims. Slip and fall, negligent security cases. Serving Pensacola, Fort Walton Beach, Destin, Crestview, and Mobile. Free consultation 24/7.">
-    
+
+    <!-- Primary SEO Meta Tags -->
+    <title>Premises Liability Attorneys Pensacola, Destin, Mobile | Dean & Camper P.A.</title>
+    <meta name="description" content="Experienced premises liability attorneys at Dean & Camper P.A. Slip and fall, negligent security, dangerous conditions. Serving Pensacola, Fort Walton Beach, Destin, Crestview, and Mobile. Free consultation 24/7.">
+    <meta name="keywords" content="premises liability lawyer Pensacola, slip and fall attorney Florida, negligent security lawyer, premises liability attorney Mobile Alabama, slip and fall Destin, property injury lawyer Fort Walton Beach">
+
+    <!-- Geo-targeting Meta Tags -->
+    <meta name="geo.region" content="US-FL">
+    <meta name="geo.region" content="US-AL">
+    <meta name="geo.placename" content="Pensacola, Fort Walton Beach, Destin, Mobile">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Premises Liability Attorneys | Dean & Camper P.A.">
+    <meta property="og:description" content="Experienced premises liability attorneys fighting for maximum compensation for injury victims in Florida and Alabama.">
+    <meta property="og:image" content="https://www.deancamper.com/dean-camper-logo-og.png">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://www.deancamper.com/premises-liability">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "serviceType": "Premises Liability Legal Representation",
+        "provider": {
+            "@type": "LegalService",
+            "name": "Dean & Camper, P.A.",
+            "url": "https://www.deancamper.com",
+            "telephone": "+1-850-433-3077",
+            "areaServed": ["Florida", "Alabama"],
+            "priceRange": "Free Consultation"
+        },
+        "description": "Comprehensive legal representation for premises liability victims including slip and fall accidents, negligent security, dangerous property conditions, and store accidents.",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD",
+            "name": "Free Consultation"
+        }
+    }
+    </script>
+
+    <!-- Breadcrumb Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.deancamper.com"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Premises Liability",
+                "item": "https://www.deancamper.com/premises-liability"
+            }
+        ]
+    }
+    </script>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #1a2a6c;
-            --secondary: #fdb900;
-            --accent: #5da9e9;
-            --text-dark: #0f1419;
-            --text-light: #5a6978;
-            --bg-light: #f5f8fa;
-            --bg-white: #ffffff;
-            --border: #d0dae6;
+            --primary-navy: #0A1F3D;
+            --gold: #D4AF37;
+            --gold-light: #E8C96A;
+            --text-dark: #1A1A1A;
+            --text-light: #5A5A5A;
+            --cream: #F8F6F1;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
+            --success: #16a34a;
         }
-        
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: 'Work Sans', sans-serif;
-            color: var(--text-dark);
-            line-height: 1.6;
-            background: var(--bg-white);
-        }
-        
-        /* Header */
-        header {
-            position: sticky;
-            top: 0;
-            left: 0;
-            right: 0;
-            background: #1a2a6c;
-            z-index: 1000;
-        }
-        
-        .header-banner {
-            width: 100%;
-            max-width: 100%;
-            max-height: 250px;
-            height: auto;
-            display: block;
-            object-fit: contain;
-            background: #1a2a6c;
-        }
-        
-        nav {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0.75rem 2rem;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: rgba(26, 42, 108, 0.95);
-            gap: 2rem;
-        }
-        
-        nav a {
-            color: var(--bg-white);
-            text-decoration: none;
-            font-weight: 500;
-            transition: color 0.3s;
-            font-size: 0.95rem;
-            letter-spacing: 0.3px;
-            padding: 0.5rem 1rem;
-        }
-        
-        nav a:hover {
-            color: var(--secondary);
-        }
-        
-        nav .cta-button {
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 0.75rem 1.75rem;
-            border-radius: 4px;
-            font-weight: 600;
-            transition: all 0.3s;
-            border: 2px solid var(--secondary);
-        }
-        
-        nav .cta-button:hover {
-            background: transparent;
-            color: var(--secondary);
-            border-color: var(--secondary);
-            transform: translateY(-2px);
-        }
-        
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, #1a2a6c 0%, #2d4a8f 100%);
-            color: white;
-            padding: 4rem 2rem 3rem;
-            text-align: center;
-            position: relative;
-        }
-        
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-image: 
-                radial-gradient(circle at 20% 50%, rgba(253, 185, 0, 0.08) 0%, transparent 50%);
-            opacity: 0.6;
-        }
-        
-        .hero-content {
-            position: relative;
-            z-index: 1;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-        
-        .hero h1 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            line-height: 1.2;
-        }
-        
-        .hero p {
-            font-size: 1.25rem;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .hero-locations {
-            font-size: 1.1rem;
-            font-weight: 600;
-            color: var(--secondary);
-            margin-top: 1.5rem;
-        }
-        
-        /* Content Section */
-        .content-section {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 4rem 2rem;
-        }
-        
-        .content-intro {
-            background: var(--bg-light);
-            padding: 3rem;
-            border-radius: 8px;
-            border-left: 4px solid var(--secondary);
-            margin-bottom: 3rem;
-        }
-        
-        .content-intro h2 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .content-intro p {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: var(--text-dark);
-            margin-bottom: 1.25rem;
-        }
-        
-        .content-intro p:last-child {
-            margin-bottom: 0;
-        }
-        
-        .info-section {
-            margin-bottom: 3rem;
-        }
-        
-        .info-section h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-        }
-        
-        .info-section p {
-            font-size: 1.1rem;
-            line-height: 1.9;
-            color: var(--text-dark);
-            margin-bottom: 1.25rem;
-        }
-        
-        .types-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .type-card {
-            background: var(--bg-light);
-            padding: 2rem;
-            border-radius: 8px;
-            border-top: 4px solid var(--secondary);
-            transition: all 0.3s;
-        }
-        
-        .type-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .type-icon {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            display: block;
-        }
-        
-        .type-card h4 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 1rem;
-        }
-        
-        .type-card p {
-            color: var(--text-dark);
-            line-height: 1.7;
-            font-size: 1rem;
-        }
-        
-        .highlight-box {
-            background: linear-gradient(135deg, var(--primary) 0%, #2d4a8f 100%);
-            color: white;
-            padding: 3rem;
-            border-radius: 8px;
-            margin: 3rem 0;
-            text-align: center;
-        }
-        
-        .highlight-box h3 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            color: var(--secondary);
-        }
-        
-        .highlight-box p {
-            font-size: 1.15rem;
-            line-height: 1.8;
-            margin-bottom: 1rem;
-        }
-        
-        .highlight-box p:last-child {
-            margin-bottom: 0;
-        }
-        
-        .experience-stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin: 3rem 0;
-        }
-        
-        .stat-card {
-            background: var(--bg-light);
-            padding: 2.5rem 2rem;
-            border-radius: 8px;
-            text-align: center;
-            border-top: 4px solid var(--secondary);
-            transition: all 0.3s;
-        }
-        
-        .stat-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
-        }
-        
-        .stat-number {
-            font-family: 'Crimson Pro', serif;
-            font-size: 3rem;
-            font-weight: 700;
-            color: var(--primary);
-            margin-bottom: 0.5rem;
-        }
-        
-        .stat-label {
-            font-size: 1rem;
-            color: var(--text-light);
-            font-weight: 600;
-        }
-        
-        /* CTA Section */
-        .cta-section {
-            background: var(--primary);
-            color: white;
-            padding: 4rem 2rem;
-            text-align: center;
-        }
-        
-        .cta-content {
-            max-width: 900px;
-            margin: 0 auto;
-        }
-        
-        .cta-content h2 {
-            font-family: 'Crimson Pro', serif;
-            font-size: 2.5rem;
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-        }
-        
-        .cta-content p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-        
-        .office-list {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-            max-width: 900px;
-            margin: 2rem auto;
-        }
-        
-        .office-item {
-            font-size: 1.15rem;
-            padding: 1rem;
-            background: rgba(255, 255, 255, 0.1);
-            border-radius: 8px;
-            transition: all 0.3s;
-        }
-        
-        .office-item:hover {
-            background: rgba(255, 255, 255, 0.15);
-            transform: translateY(-3px);
-        }
-        
-        .office-item strong {
-            color: var(--secondary);
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-        
-        .office-item a {
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1.25rem;
-        }
-        
-        .office-item a:hover {
-            text-decoration: underline;
-        }
-        
-        .btn-cta {
-            background: var(--secondary);
-            color: var(--primary);
-            padding: 1.2rem 3rem;
-            border-radius: 4px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 1.1rem;
-            display: inline-block;
-            transition: all 0.3s;
-            margin-top: 1.5rem;
-        }
-        
-        .btn-cta:hover {
-            transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(253, 185, 0, 0.4);
-        }
-        
-        /* Footer */
-        footer {
-            background: var(--primary);
-            color: white;
-            padding: 3rem 2rem 2rem;
-            text-align: center;
-        }
-        
-        footer p {
-            color: rgba(255, 255, 255, 0.8);
-            margin-bottom: 1rem;
-        }
-        
-        footer a {
-            color: var(--secondary);
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            text-decoration: underline;
-        }
-        
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
-            .content-intro,
-            .highlight-box {
-                padding: 2rem;
-            }
-            
-            nav {
-                flex-wrap: wrap;
-                gap: 1rem;
-            }
-        }
-    
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        h1, h2, h3, h4, h5, h6 { font-family: 'Playfair Display', Georgia, serif; }
+        body { font-family: 'Work Sans', sans-serif; color: var(--text-dark); line-height: 1.6; background: var(--white); }
+
         /* ===== STANDARD SITE HEADER ===== */
-        body { margin: 0; padding: 0; }
         .site-header {
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            position: sticky; top: 0; z-index: 1000;
             background: #0A1F3D;
             box-shadow: 0 2px 10px rgba(0,0,0,0.18);
             font-family: 'Work Sans', sans-serif;
         }
         .site-header-top {
             background: linear-gradient(135deg, #050F1C 0%, #0A1F3D 100%);
-            padding: 0.55rem 2rem;
-            text-align: center;
-            font-size: 0.85rem;
+            padding: 0.55rem 2rem; text-align: center; font-size: 0.85rem;
         }
         .site-header-top p { color: rgba(255,255,255,0.9); margin: 0; }
         .site-header-top a { color: #D4AF37; text-decoration: none; font-weight: 600; }
         .site-header-top a:hover { color: #E8C96A; }
         .site-nav-container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0.75rem 2rem;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            max-width: 1400px; margin: 0 auto; padding: 0.75rem 2rem;
+            display: flex; justify-content: space-between; align-items: center;
         }
         .site-logo-link { display: flex; align-items: center; text-decoration: none; }
         .site-logo-link picture img { max-height: 58px; width: auto; display: block; }
         .site-nav-links {
-            display: flex;
-            list-style: none;
-            gap: 1.4rem;
-            align-items: center;
-            margin: 0;
-            padding: 0;
+            display: flex; list-style: none; gap: 1.4rem;
+            align-items: center; margin: 0; padding: 0;
         }
         .site-nav-links > li { position: relative; }
         .site-nav-links a {
-            color: white;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 0.93rem;
-            padding: 0.45rem 0;
-            transition: color 0.3s;
+            color: white; text-decoration: none; font-weight: 500;
+            font-size: 0.93rem; padding: 0.45rem 0; transition: color 0.3s;
         }
         .site-nav-links a:hover { color: #D4AF37; }
         .site-dropdown-menu {
-            display: none;
-            position: absolute;
-            top: calc(100% + 0.5rem);
-            left: 0;
-            background: white;
-            min-width: 230px;
+            display: none; position: absolute; top: calc(100% + 0.5rem); left: 0;
+            background: white; min-width: 230px;
             box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-            border-radius: 4px;
-            padding: 0.4rem 0;
-            list-style: none;
-            z-index: 1001;
+            border-radius: 4px; padding: 0.4rem 0; list-style: none; z-index: 1001;
         }
         .site-dropdown:hover .site-dropdown-menu { display: block; }
         .site-dropdown-menu a {
-            color: #1A1A1A;
-            padding: 0.65rem 1.2rem;
-            display: block;
-            font-size: 0.88rem;
-            font-weight: 400;
+            color: #1A1A1A; padding: 0.65rem 1.2rem;
+            display: block; font-size: 0.88rem; font-weight: 400;
         }
         .site-dropdown-menu a:hover { background: #F8F6F1; color: #0A1F3D; }
         .site-btn-nav {
-            background: #D4AF37 !important;
-            color: #0A1F3D !important;
-            padding: 0.55rem 1.4rem !important;
-            border-radius: 4px;
-            font-weight: 600 !important;
+            background: #D4AF37 !important; color: #0A1F3D !important;
+            padding: 0.55rem 1.4rem !important; border-radius: 4px; font-weight: 600 !important;
         }
         .site-btn-nav:hover { background: #E8C96A !important; transform: translateY(-2px); }
         .site-mobile-toggle {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.6rem;
-            cursor: pointer;
-            line-height: 1;
+            display: none; background: none; border: none;
+            color: white; font-size: 1.6rem; cursor: pointer; line-height: 1;
         }
         @media (max-width: 968px) {
             .site-mobile-toggle { display: block; }
             .site-nav-links {
-                display: none;
-                position: absolute;
-                top: 100%;
-                left: 0;
-                right: 0;
-                background: #0A1F3D;
-                flex-direction: column;
-                padding: 0.75rem 0;
-                gap: 0;
+                display: none; position: absolute; top: 100%; left: 0; right: 0;
+                background: #0A1F3D; flex-direction: column; padding: 0.75rem 0; gap: 0;
             }
             .site-nav-links.active { display: flex; }
             .site-nav-links > li { width: 100%; }
-            .site-nav-links a {
-                display: block;
-                padding: 0.85rem 1.5rem;
-                border-bottom: 1px solid rgba(255,255,255,0.07);
-            }
+            .site-nav-links a { display: block; padding: 0.85rem 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.07); }
             .site-dropdown-menu {
-                position: static;
-                display: none;
-                box-shadow: none;
-                background: rgba(0,0,0,0.22);
-                border-radius: 0;
-                margin-top: 0;
+                position: static; display: none; box-shadow: none;
+                background: rgba(0,0,0,0.22); border-radius: 0; margin-top: 0;
             }
             .site-dropdown.active .site-dropdown-menu { display: block; }
             .site-dropdown-menu a { color: rgba(255,255,255,0.85); padding-left: 2.5rem; }
             .site-dropdown-menu a:hover { background: rgba(255,255,255,0.05); color: #D4AF37; }
         }
-</style>
+
+        /* ===== PAGE HERO ===== */
+        .page-hero {
+            background: linear-gradient(135deg, #0A1F3D 0%, #2d4a8f 100%);
+            color: white; padding: 6rem 2rem 4rem; text-align: center;
+        }
+        .page-hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem; font-weight: 700;
+            margin-bottom: 1.5rem; line-height: 1.2;
+        }
+        .page-hero p {
+            font-size: 1.25rem; max-width: 800px;
+            margin: 0 auto 2rem; opacity: 0.95;
+        }
+        .btn-primary {
+            display: inline-block; background: var(--gold);
+            color: var(--primary-navy); padding: 1.1rem 2.5rem;
+            border-radius: 4px; text-decoration: none; font-weight: 600;
+            transition: all 0.3s; font-size: 1.05rem; border: 2px solid var(--gold);
+        }
+        .btn-primary:hover { background: transparent; color: var(--gold); transform: translateY(-3px); }
+
+        /* ===== CONTENT ===== */
+        .content-section {
+            max-width: 1200px; margin: 0 auto; padding: 6rem 2rem;
+        }
+        .content-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem; color: var(--primary-navy); margin-bottom: 1.5rem;
+        }
+        .content-section h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.75rem; color: var(--primary-navy); margin: 2.5rem 0 1rem;
+        }
+        .content-section p { color: var(--text-light); line-height: 1.8; margin-bottom: 1.5rem; font-size: 1.05rem; }
+        .content-section ul { margin: 1.5rem 0; padding-left: 2rem; }
+        .content-section li { color: var(--text-light); margin-bottom: 0.75rem; line-height: 1.7; font-size: 1.05rem; }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem; margin: 3rem 0;
+        }
+        .stat-box {
+            background: var(--cream); padding: 2rem; border-radius: 8px;
+            text-align: center; border-left: 4px solid var(--gold);
+        }
+        .stat-number { font-family: 'Playfair Display', serif; font-size: 2.5rem; font-weight: 700; color: var(--primary-navy); margin-bottom: 0.5rem; }
+        .stat-label { color: var(--text-light); font-size: 0.95rem; }
+
+        /* Types Grid */
+        .types-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem; margin: 2rem 0;
+        }
+        .type-card {
+            background: var(--cream); padding: 2rem; border-radius: 8px;
+            border-top: 4px solid var(--gold); transition: all 0.3s;
+        }
+        .type-card:hover { transform: translateY(-5px); box-shadow: 0 15px 40px rgba(0,0,0,0.1); }
+        .type-icon { font-size: 2.5rem; margin-bottom: 1rem; display: block; }
+        .type-card h4 { font-family: 'Playfair Display', serif; font-size: 1.3rem; color: var(--primary-navy); margin-bottom: 0.75rem; }
+        .type-card p { color: var(--text-light); line-height: 1.7; font-size: 0.98rem; margin: 0; }
+
+        /* Highlight Box */
+        .highlight-box {
+            background: var(--cream); padding: 3rem; border-radius: 8px;
+            border-left: 4px solid var(--success); margin: 3rem 0;
+        }
+        .highlight-box h3 { margin-top: 0; color: var(--success); }
+
+        /* Two Column */
+        .two-column {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem; margin: 2rem 0;
+        }
+
+        /* ===== CTA SECTION ===== */
+        .cta-section {
+            background: linear-gradient(135deg, #0A1F3D 0%, #2d4a8f 100%);
+            color: white; padding: 6rem 2rem; text-align: center;
+        }
+        .cta-section h2 { font-family: 'Playfair Display', serif; font-size: 3rem; margin-bottom: 1.5rem; }
+        .cta-section p { font-size: 1.25rem; margin-bottom: 2rem; opacity: 0.95; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        .office-phones {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.2rem; max-width: 900px; margin: 2.5rem auto;
+        }
+        .office-phone-item {
+            background: rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem 1.2rem;
+            transition: background 0.3s;
+        }
+        .office-phone-item:hover { background: rgba(255,255,255,0.18); }
+        .office-phone-item strong { color: var(--gold); display: block; margin-bottom: 0.3rem; font-size: 0.9rem; }
+        .office-phone-item a { color: white; text-decoration: none; font-weight: 600; font-size: 1.1rem; }
+        .office-phone-item a:hover { text-decoration: underline; }
+
+        .spanish-text { font-size: 1.1rem; color: var(--gold); font-weight: 600; margin-top: 1.5rem; }
+
+        /* ===== FOOTER ===== */
+        footer { background: #1A1A1A; color: rgba(255,255,255,0.8); padding: 3rem 2rem 2rem; }
+        .footer-content {
+            max-width: 1400px; margin: 0 auto;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 3rem; margin-bottom: 2rem;
+        }
+        .footer-section h3 { color: var(--gold); font-family: 'Playfair Display', serif; margin-bottom: 1rem; font-size: 1.2rem; }
+        .footer-section a { color: rgba(255,255,255,0.8); text-decoration: none; display: block; margin-bottom: 0.4rem; line-height: 1.8; }
+        .footer-section a:hover { color: var(--gold); }
+        .footer-section p { color: rgba(255,255,255,0.8); line-height: 1.8; margin-bottom: 0.4rem; }
+        .footer-bottom {
+            max-width: 1400px; margin: 0 auto; padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            text-align: center; font-size: 0.88rem;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .page-hero h1 { font-size: 2.4rem; }
+            .content-section h2 { font-size: 2rem; }
+            .cta-section h2 { font-size: 2.2rem; }
+            .highlight-box { padding: 2rem; }
+        }
+    </style>
 </head>
 <body>
-    <!-- Header -->
-    <header class="site-header">
+
+<!-- ===== HEADER ===== -->
+<header class="site-header">
     <div class="site-header-top">
         <p>
             <a href="tel:8504333077">Pensacola: (850) 433-3077</a> &nbsp;|&nbsp;
@@ -571,12 +317,12 @@
                         <li><a href="car-accident-injuries.html">Car Accidents</a></li>
                         <li><a href="truck-accident-injuries.html">Truck Accidents</a></li>
                         <li><a href="motorcycle-accident-injuries.html">Motorcycle Accidents</a></li>
-                        <li><a href="boat-accident-injuries.html">Boat Accidents</a></li>
-                        <li><a href="wrongful-death.html">Wrongful Death</a></li>
+                        <li><a href="auto-insurance-claims.html">Auto Insurance Claims</a></li>
+                        <li><a href="wrongful-death.html">Wrongful Death Claims</a></li>
                         <li><a href="premises-liability.html">Premises Liability</a></li>
-                        <li><a href="defective-product-injuries.html">Product Liability</a></li>
+                        <li><a href="boat-accident-injuries.html">Boat Accidents</a></li>
+                        <li><a href="defective-product-injuries.html">Defective Product Injuries</a></li>
                         <li><a href="dog-bite-injuries.html">Dog Bite Injuries</a></li>
-                        <li><a href="auto-insurance-claims.html">Insurance Claims</a></li>
                         <li><a href="other-personal-injuries.html">Other Personal Injuries</a></li>
                     </ul>
                 </li>
@@ -595,118 +341,259 @@
     </nav>
 </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Premises Liability Attorneys</h1>
-            <p>Protecting Your Rights After an Injury on Someone Else's Property</p>
-            <p class="hero-locations">Serving Pensacola, Fort Walton Beach, Crestview, Destin, and Mobile</p>
-        </div>
-    </section>
+<!-- ===== HERO ===== -->
+<section class="page-hero">
+    <h1>Premises Liability Attorneys</h1>
+    <p>Injured on someone else's property? Our experienced attorneys fight to hold negligent property owners accountable and recover the maximum compensation you deserve across Florida and Alabama.</p>
+    <a href="tel:+18504333077" class="btn-primary">&#128222; Free Consultation &mdash; Call Now</a>
+</section>
 
-    <!-- Content Section -->
-    <section class="content-section">
-        <div class="content-intro">
-            <h2>Injured on Someone Else's Property?</h2>
-            <p>If you or a loved one has been injured while on someone else's property and have questions about what to do, don't delay. Call the premises liability attorneys at Dean & Camper, P.A. for a free consultation. Our premises liability injury lawyers can help answer your questions and assist you in dealing with insurance companies to ensure you are protecting your legal rights and receiving the compensation you deserve for your injuries.</p>
-            <p>Call us anytime, 24 hours per day, 7 days a week, for a free consultation with one of our experienced premises liability lawyers. With evening, weekend, home, and hospital appointments available for those in need, our lawyers will be there when and where you need them.</p>
-        </div>
+<!-- ===== MAIN CONTENT ===== -->
+<section class="content-section">
+    <h2>Trusted Premises Liability Lawyers on the Gulf Coast</h2>
+    <p>Property owners — whether individuals, businesses, or government entities — have a legal duty to maintain safe conditions on their premises. When they fail in that duty and you suffer an injury as a result, you have the right to seek compensation for your losses.</p>
 
-        <div class="info-section">
-            <h3>Common Types of Premises Liability Cases</h3>
-        </div>
+    <p>At Dean &amp; Camper P.A., premises liability is all we do. With over four decades of combined experience, our attorneys have helped hundreds of injury victims throughout Florida and Alabama recover the compensation they deserve. We handle everything from slip and fall accidents at grocery stores to serious injuries caused by negligent security at apartments and hotels. We offer free consultations 24 hours a day, 7 days a week — including evening, weekend, home, and hospital appointments.</p>
 
-        <div class="types-grid">
-            <div class="type-card">
-                <span class="type-icon">🚶</span>
-                <h4>Slip and Fall Accidents</h4>
-                <p>Injuries from wet floors, uneven surfaces, poor lighting, or other hazardous conditions on commercial or residential property.</p>
-            </div>
-            <div class="type-card">
-                <span class="type-icon">🔒</span>
-                <h4>Inadequate Security</h4>
-                <p>Assaults or injuries resulting from negligent security measures in parking lots, apartments, hotels, or businesses.</p>
-            </div>
-            <div class="type-card">
-                <span class="type-icon">🏗️</span>
-                <h4>Dangerous Conditions</h4>
-                <p>Injuries from falling objects, broken stairs, defective railings, swimming pool accidents, or other property hazards.</p>
-            </div>
-            <div class="type-card">
-                <span class="type-icon">🏪</span>
-                <h4>Store Accidents</h4>
-                <p>Injuries in retail stores, restaurants, or shopping centers due to poorly maintained premises or negligent property management.</p>
-            </div>
+    <div class="stats-grid">
+        <div class="stat-box">
+            <div class="stat-number">$50M+</div>
+            <div class="stat-label">Recovered for Clients</div>
         </div>
-
-        <div class="highlight-box">
-            <h3>Available 24/7 When You Need Us</h3>
-            <p>Property owners have a legal duty to maintain safe conditions. When they fail in this responsibility and you're injured, we're here to fight for your rights.</p>
-            <p><strong>Call anytime for a free consultation. Evening, weekend, home, and hospital appointments available.</strong></p>
+        <div class="stat-box">
+            <div class="stat-number">40+</div>
+            <div class="stat-label">Years Combined Experience</div>
         </div>
-
-        <div class="info-section">
-            <h3>Experience and Dedication You Can Count On</h3>
-            <p>At the personal injury law firm of Dean & Camper, P.A., helping accident and injury victims with their personal injury claims is all we do. With over four decades of combined experience, our premises liability injury attorneys have the knowledge and resources to help you pursue the maximum compensation for your damages and losses, and to ensure you are receiving all of the benefits you are entitled to.</p>
-            <p>Through our 5 offices in Pensacola, Fort Walton Beach, Crestview, Destin, and Mobile, and with lawyers licensed in Florida and Alabama, we represent premises liability victims throughout Florida and Alabama, as well as out-of-state visitors injured in a premises liability accident in Florida or Alabama.</p>
-            <p><strong>Don't delay and risk losing your legal rights. Call our premises liability injury lawyers now for a free consultation.</strong></p>
+        <div class="stat-box">
+            <div class="stat-number">24/7</div>
+            <div class="stat-label">Available to Help</div>
         </div>
-
-        <div class="experience-stats">
-            <div class="stat-card">
-                <div class="stat-number">40+</div>
-                <div class="stat-label">Years Combined Experience</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">5</div>
-                <div class="stat-label">Office Locations</div>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">24/7</div>
-                <div class="stat-label">Available for You</div>
-            </div>
+        <div class="stat-box">
+            <div class="stat-number">$0</div>
+            <div class="stat-label">Upfront Legal Fees</div>
         </div>
-    </section>
+    </div>
 
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="cta-content">
-            <h2>Get the Legal Help You Deserve</h2>
-            <p>Property owners and managers must keep their premises safe. If you've been injured due to a dangerous condition on someone else's property, contact our experienced premises liability attorneys today for a free consultation.</p>
-            
-            <h3 style="color: var(--secondary); margin-bottom: 1.5rem; font-family: 'Crimson Pro', serif;">Call Any Of Our Offices:</h3>
-            <div class="office-list">
-                <div class="office-item">
-                    <strong>Pensacola:</strong> <a href="tel:8504333077">(850) 433-3077</a>
-                </div>
-                <div class="office-item">
-                    <strong>Fort Walton Beach:</strong> <a href="tel:8507963077">(850) 796-3077</a>
-                </div>
-                <div class="office-item">
-                    <strong>Destin:</strong> <a href="tel:8502697105">(850) 269-7105</a>
-                </div>
-                <div class="office-item">
-                    <strong>Crestview:</strong> <a href="tel:8507963077">(850) 796-3077</a>
-                </div>
-                <div class="office-item">
-                    <strong>Mobile:</strong> <a href="tel:2512830577">(251) 283-0577</a>
-                </div>
-            </div>
-            
-            <p style="margin-top: 2rem; font-size: 1.2rem; font-weight: 600;">Si Hablo Español</p>
-            <p style="margin-top: 1rem; font-size: 1.1rem;">No Fees Unless We Win Your Case</p>
-            <a href="tel:8504333077" class="btn-cta">Call Now for Free Consultation</a>
+    <h3>Common Types of Premises Liability Cases We Handle</h3>
+    <p>Our attorneys represent victims in all types of property injury cases, including:</p>
+
+    <div class="types-grid">
+        <div class="type-card">
+            <span class="type-icon">🚶</span>
+            <h4>Slip &amp; Fall Accidents</h4>
+            <p>Injuries from wet floors, uneven surfaces, broken pavement, poor lighting, or other hazardous conditions on commercial or residential property.</p>
         </div>
-    </section>
+        <div class="type-card">
+            <span class="type-icon">🔒</span>
+            <h4>Negligent Security</h4>
+            <p>Assaults or injuries resulting from inadequate security measures at parking lots, apartments, hotels, nightclubs, or shopping centers.</p>
+        </div>
+        <div class="type-card">
+            <span class="type-icon">🏗️</span>
+            <h4>Dangerous Conditions</h4>
+            <p>Injuries from falling objects, broken stairs, defective railings, swimming pool accidents, or other structural hazards on the property.</p>
+        </div>
+        <div class="type-card">
+            <span class="type-icon">🏪</span>
+            <h4>Store &amp; Business Accidents</h4>
+            <p>Injuries in retail stores, restaurants, warehouses, or shopping centers caused by poorly maintained premises or negligent property management.</p>
+        </div>
+        <div class="type-card">
+            <span class="type-icon">🏊</span>
+            <h4>Swimming Pool Accidents</h4>
+            <p>Drownings, near-drownings, and diving injuries caused by unsecured pool areas, missing safety equipment, or poorly maintained facilities.</p>
+        </div>
+        <div class="type-card">
+            <span class="type-icon">🏗️</span>
+            <h4>Construction Zone Injuries</h4>
+            <p>Injuries to visitors or pedestrians caused by unsafe construction areas, unmarked hazards, or failure to maintain proper barriers and signage.</p>
+        </div>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <p><strong>Dean & Camper, P.A. - Premises Liability Attorneys</strong></p>
-        <p>Serving Florida and Alabama</p>
-        <p>Available 24/7 | No Fees Unless We Win | Si Hablo Español</p>
-        <p style="margin-top: 1.5rem; font-size: 0.9rem;">&copy; 2026 Dean & Camper, P.A. Injury Lawyers. All rights reserved.</p>
-        <p style="font-size: 0.85rem; margin-top: 1rem;">Attorney Advertising. Prior results do not guarantee a similar outcome.</p>
-        <p style="margin-top: 1rem;"><a href="index.html">Return to Home Page</a></p>
-    </footer>
+    <h3>Common Causes of Premises Liability Accidents</h3>
+    <p>Most premises liability accidents result from a property owner's negligence or failure to act. Common causes include:</p>
+
+    <div class="two-column">
+        <div>
+            <ul>
+                <li><strong>Wet or slippery floors</strong> without proper warning signs</li>
+                <li><strong>Uneven walkways</strong>, cracked sidewalks, or broken pavement</li>
+                <li><strong>Poor lighting</strong> in parking lots, stairwells, or common areas</li>
+                <li><strong>Broken or missing handrails</strong> on stairs and ramps</li>
+                <li><strong>Cluttered aisles</strong> or debris left in walkways</li>
+                <li><strong>Unsecured rugs</strong> or mats that shift underfoot</li>
+            </ul>
+        </div>
+        <div>
+            <ul>
+                <li><strong>Inadequate security cameras</strong> or lighting in high-crime areas</li>
+                <li><strong>Failure to fix known hazards</strong> after complaints or prior incidents</li>
+                <li><strong>Unmarked elevation changes</strong> between floor surfaces</li>
+                <li><strong>Defective or broken equipment</strong> including elevators and escalators</li>
+                <li><strong>Unsecured swimming pools</strong> accessible to children</li>
+                <li><strong>Animal attacks</strong> on improperly managed properties</li>
+            </ul>
+        </div>
+    </div>
+
+    <h3>Common Premises Liability Injuries</h3>
+    <p>Falls and property accidents can cause serious, life-altering injuries, including:</p>
+    <ul>
+        <li>Traumatic brain injuries (TBI) and concussions</li>
+        <li>Spinal cord injuries and paralysis</li>
+        <li>Broken bones and fractures — especially hips, wrists, and ankles</li>
+        <li>Torn ligaments, tendons, and soft tissue injuries</li>
+        <li>Shoulder injuries from bracing a fall</li>
+        <li>Neck and back injuries</li>
+        <li>Lacerations and scarring</li>
+        <li>Wrongful death in the most serious cases</li>
+    </ul>
+
+    <div class="highlight-box">
+        <h3>Florida and Alabama Premises Liability Laws</h3>
+        <p><strong>Florida:</strong> Florida law classifies visitors as invitees (customers, guests), licensees (social visitors), or trespassers. Property owners owe the highest duty of care to invitees — they must regularly inspect the property, fix known hazards, and warn visitors of dangers. Florida's statute of limitations for premises liability claims is generally 2 years from the date of the injury. Under Florida's modified comparative negligence rule, your compensation is reduced by your percentage of fault, and you cannot recover if you are more than 50% at fault.</p>
+        <p><strong>Alabama:</strong> Alabama follows a stricter contributory negligence standard. If you are found even 1% at fault for your own injury, you may be barred from recovering any compensation. Alabama's statute of limitations for premises liability is 2 years. Because of Alabama's harsh contributory negligence rule, it is critical to have an experienced attorney protecting your rights from the very beginning.</p>
+    </div>
+
+    <h3>Compensation Available in Premises Liability Cases</h3>
+    <p>Victims of premises liability accidents may be entitled to recover:</p>
+    <ul>
+        <li><strong>Medical expenses</strong> — Emergency care, surgery, hospitalization, physical therapy, and future treatment</li>
+        <li><strong>Lost wages</strong> — Income lost while you recover from your injuries</li>
+        <li><strong>Lost earning capacity</strong> — Reduced ability to earn a living if your injuries are permanent</li>
+        <li><strong>Pain and suffering</strong> — Compensation for physical pain and emotional distress</li>
+        <li><strong>Loss of enjoyment of life</strong> — Inability to participate in activities you previously enjoyed</li>
+        <li><strong>Scarring and disfigurement</strong> — Permanent physical effects of your injuries</li>
+        <li><strong>Punitive damages</strong> — In cases involving egregious or willful negligence</li>
+        <li><strong>Wrongful death damages</strong> — Funeral expenses, lost financial support, and loss of companionship for surviving families</li>
+    </ul>
+
+    <h3>How We Build Your Premises Liability Case</h3>
+    <p>Our attorneys take a thorough, aggressive approach to every premises liability case:</p>
+    <ul>
+        <li><strong>Immediate investigation</strong> — We preserve surveillance footage, incident reports, and physical evidence before it disappears</li>
+        <li><strong>Identifying all liable parties</strong> — Property owners, property managers, maintenance companies, and tenants may all share liability</li>
+        <li><strong>Documenting your injuries</strong> — We work with medical experts to fully document the extent of your injuries and future care needs</li>
+        <li><strong>Proving notice</strong> — We establish that the property owner knew or should have known about the dangerous condition</li>
+        <li><strong>Aggressive insurance negotiation</strong> — We fight lowball settlement offers and bad-faith tactics from insurance companies</li>
+        <li><strong>Trial-ready representation</strong> — We prepare every case for trial from day one, which results in stronger settlements</li>
+    </ul>
+
+    <h3>Why Choose Dean &amp; Camper P.A.</h3>
+    <ul>
+        <li>Over four decades of combined experience in Florida and Alabama personal injury law</li>
+        <li>Members of the Multi-Million Dollar and Million Dollar Advocates Forum</li>
+        <li>Florida Super Lawyers Rising Stars — multiple consecutive years</li>
+        <li>Five Gulf Coast offices: Pensacola, Fort Walton Beach, Destin, Crestview, and Mobile</li>
+        <li>No fees unless we win — you pay nothing upfront</li>
+        <li>Free consultations available 24/7, including evenings, weekends, and hospital visits</li>
+        <li>Bilingual services available — <em>Si Hablo Espa&ntilde;ol</em></li>
+    </ul>
+
+    <h3>Areas We Serve</h3>
+    <p>We represent premises liability victims throughout the Gulf Coast, including:</p>
+    <ul>
+        <li><a href="pensacola_car_accident_lawyer_page.html">Pensacola, FL</a></li>
+        <li><a href="fort_walton_beach_car_accident_lawyer_page.html">Fort Walton Beach, FL</a></li>
+        <li><a href="destin_car_accident_lawyer_page.html">Destin, FL</a></li>
+        <li><a href="crestview_car_accident_lawyer_page.html">Crestview, FL</a></li>
+        <li><a href="mobile_al_car_accident_lawyer_page.html">Mobile, AL</a></li>
+    </ul>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-section">
+    <h2>Injured on Someone Else's Property?</h2>
+    <p>Don't wait. Evidence disappears and deadlines apply. Contact our experienced premises liability attorneys today for a free consultation — available 24 hours a day, 7 days a week.</p>
+
+    <div class="office-phones">
+        <div class="office-phone-item">
+            <strong>Pensacola</strong>
+            <a href="tel:8504333077">(850) 433-3077</a>
+        </div>
+        <div class="office-phone-item">
+            <strong>Fort Walton Beach</strong>
+            <a href="tel:8507963077">(850) 796-3077</a>
+        </div>
+        <div class="office-phone-item">
+            <strong>Destin</strong>
+            <a href="tel:8502697105">(850) 269-7105</a>
+        </div>
+        <div class="office-phone-item">
+            <strong>Crestview</strong>
+            <a href="tel:8507963077">(850) 796-3077</a>
+        </div>
+        <div class="office-phone-item">
+            <strong>Mobile, AL</strong>
+            <a href="tel:2512830577">(251) 283-0577</a>
+        </div>
+    </div>
+
+    <a href="tel:8504333077" class="btn-primary">Call Now for a Free Consultation</a>
+    <p class="spanish-text">Si Hablo Espa&ntilde;ol</p>
+    <p style="margin-top:1rem; font-size:1rem; opacity:0.85;">No Fees Unless We Win Your Case</p>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+    <div class="footer-content">
+        <div class="footer-section">
+            <h3>Practice Areas</h3>
+            <a href="car-accident-injuries.html">Car Accidents</a>
+            <a href="truck-accident-injuries.html">Truck Accidents</a>
+            <a href="motorcycle-accident-injuries.html">Motorcycle Accidents</a>
+            <a href="auto-insurance-claims.html">Auto Insurance Claims</a>
+            <a href="wrongful-death.html">Wrongful Death Claims</a>
+            <a href="premises-liability.html">Premises Liability</a>
+            <a href="boat-accident-injuries.html">Boat Accidents</a>
+            <a href="defective-product-injuries.html">Defective Product Injuries</a>
+            <a href="dog-bite-injuries.html">Dog Bite Injuries</a>
+            <a href="other-personal-injuries.html">Other Personal Injuries</a>
+        </div>
+        <div class="footer-section">
+            <h3>Our Attorneys</h3>
+            <a href="shane-dean.html">Shane Dean</a>
+            <a href="chad-camper.html">Chad Camper</a>
+        </div>
+        <div class="footer-section">
+            <h3>Office Locations</h3>
+            <p>Pensacola, FL &mdash; <a href="tel:8504333077">(850) 433-3077</a></p>
+            <p>Fort Walton Beach, FL &mdash; <a href="tel:8507963077">(850) 796-3077</a></p>
+            <p>Destin, FL &mdash; <a href="tel:8502697105">(850) 269-7105</a></p>
+            <p>Crestview, FL &mdash; <a href="tel:8507963077">(850) 796-3077</a></p>
+            <p>Mobile, AL &mdash; <a href="tel:2512830577">(251) 283-0577</a></p>
+        </div>
+        <div class="footer-section">
+            <h3>Dean &amp; Camper P.A.</h3>
+            <p>Personal injury attorneys serving Florida and Alabama.</p>
+            <p>Available 24/7 &mdash; No Fees Unless We Win</p>
+            <p><em>Si Hablo Espa&ntilde;ol</em></p>
+            <a href="contact.html">Contact Us</a>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 Dean &amp; Camper P.A. Injury Lawyers. All rights reserved.</p>
+        <p style="margin-top:0.5rem;">Attorney Advertising. Prior results do not guarantee a similar outcome.</p>
+    </div>
+</footer>
+
+<script>
+    // Mobile nav toggle
+    const toggle = document.querySelector('.site-mobile-toggle');
+    const nav = document.querySelector('.site-nav-links');
+    if (toggle && nav) {
+        toggle.addEventListener('click', () => nav.classList.toggle('active'));
+    }
+    // Mobile dropdown toggles
+    document.querySelectorAll('.site-dropdown > a').forEach(link => {
+        link.addEventListener('click', e => {
+            if (window.innerWidth <= 968) {
+                e.preventDefault();
+                link.closest('.site-dropdown').classList.toggle('active');
+            }
+        });
+    });
+</script>
 </body>
 </html>
