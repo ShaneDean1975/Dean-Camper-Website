@@ -1,0 +1,129 @@
+.avvo_guide_content ul {
+	margin-bottom: 12px;
+}
+.avvo_guide_content ol {
+	margin-bottom: 12px;
+}
+.avvo_guide_content li {
+	padding-top: 4px;
+}
+#specialty_list table {
+	width: 100%;
+}
+#specialty_list table td {
+	width: 33%; vertical-align: top;
+}
+.specialty_parent {
+	padding-top: 16px;
+}
+.specialty_parent ul {
+	list-style: none;
+}
+.specialty_parent li {
+	padding: 2px; margin-left: 8px;
+}
+.bulleted_list {
+	padding-top: 4px; margin-left: 32px;
+}
+.bulleted_list li {
+	padding-top: 4px; margin-left: 32px;
+}
+#avvo_guide_wide_content {
+	overflow: hidden;
+}
+.questions_content {
+	padding-top: 10px; padding-left: 12px;
+}
+.questions {
+	padding-top: 8px; padding-left: 16px;
+}
+.questions li {
+	padding-top: 8px; margin-left: 45px;
+}
+.vertical_align td {
+	vertical-align: middle;
+}
+.bigger_text h1 {
+	font-size: 18px;
+}
+.bigger_text p {
+	line-height: 14pt; font-size: 14px;
+}
+div#content_body p {
+	line-height: 18px; margin-bottom: 16px;
+}
+div#content_body h1 {
+	color: rgb(255, 82, 21); padding-left: 0px; margin-top: 0px; margin-bottom: 8px; margin-left: 0px;
+}
+div#content_body h2 {
+	color: rgb(236, 95, 37); font-size: 1.1em; margin-bottom: 8px;
+}
+div#content_body h3 {
+	font-weight: bold; margin-bottom: 16px;
+}
+div#content_body h4 {
+	color: rgb(236, 95, 37); font-size: 1.1em; margin-bottom: 8px;
+}
+div#content_body ul {
+	margin-top: 0px; margin-bottom: 16px;
+}
+div#content_body ul li {
+	margin-left: 18px; list-style-position: outside; list-style-image: url("/assets/global/embed/bullet_check_sm-f22b243333e05b9ac4f3e91f6ccd9e2d464a93a4573c921a172a332c4e5d195d.gif");
+}
+div#content_body ol li {
+	margin-left: 18px; list-style-position: outside;
+}
+div#content_body div#content_shadow_box {
+	margin: 16px; padding-top: 24px; background-color: rgb(255, 255, 255);
+}
+.FAQAnchor {
+	color: rgb(0, 0, 0);
+}
+.FAQAnchor:hover {
+	color: rgb(0, 0, 0);
+}
+.FAQtopOfPage {
+	font-family: Verdana, Arial, Helvetica, sans-serif; font-size: 10px;
+}
+.profile_heading_caption {
+	font-size: 0.85em; margin-top: 2px;
+}
+.text_small {
+	font-size: 11px;
+}
+.button {
+	margin-left: -6px;
+}
+.leftAlignShadow {
+	margin-left: -8px;
+}
+.avvoGuideCalloutImage {
+	margin-left: 16px;
+}
+.number1 {
+	padding-top: 6px; padding-left: 32px; background-repeat: no-repeat;
+}
+.number2 {
+	padding-top: 6px; padding-left: 32px; background-repeat: no-repeat;
+}
+.number3 {
+	padding-top: 6px; padding-left: 32px; background-repeat: no-repeat;
+}
+.number4 {
+	padding-top: 6px; padding-left: 32px; background-repeat: no-repeat;
+}
+.number1 {
+	background-image: url("/assets/content/number01-99ab4edf48edb640ab09dc52bbccdf78eb61272d8afa3ba992c674390e1f9fc9.gif");
+}
+.number2 {
+	background-image: url("/assets/content/number02-df8ab8ec2fa1ba2b4e85735b20646037332bae49188935852a2cd3b7b2e474bc.gif");
+}
+.number3 {
+	background-image: url("/assets/content/number03-880468cbd991060ed55142e113324b0cb13332526a3e4f09e31c1ba48ed68ae5.gif");
+}
+.number4 {
+	background-image: url("/assets/content/number04-b0c2bb60ba9b62e7d6ec60d412c886c94793a07f55e6dfdd4f54f23124d10873.gif");
+}
+div#map_div {
+	height: 400px;
+}

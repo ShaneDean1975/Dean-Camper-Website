@@ -1,0 +1,156 @@
+.rating_badge_example {
+	float: left;
+}
+.reviews_badge_example {
+	float: left;
+}
+.contributor_badge_example {
+	float: left;
+}
+#new_professional_rating_badge {
+	overflow: auto; padding-left: 22px;
+}
+#new_reviews_badge {
+	overflow: auto; padding-left: 22px;
+}
+#new_top_contributor_badge {
+	overflow: auto; padding-left: 22px;
+}
+#new_professional_rating_badge > p {
+	font-style: italic;
+}
+#new_reviews_badge > p {
+	font-style: italic;
+}
+#new_top_contributor_badge > p {
+	font-style: italic;
+}
+#new_professional_rating_badge .field {
+	width: 230px; margin-bottom: 11px;
+}
+#new_reviews_badge .field {
+	width: 230px; margin-bottom: 11px;
+}
+#new_top_contributor_badge .field {
+	width: 230px; margin-bottom: 11px;
+}
+#new_professional_rating_badge .field textarea {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_professional_rating_badge .field select {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_professional_rating_badge .field input {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_reviews_badge .field textarea {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_reviews_badge .field select {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_reviews_badge .field input {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_top_contributor_badge .field textarea {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_top_contributor_badge .field select {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_top_contributor_badge .field input {
+	border: 1px solid rgb(215, 218, 221); border-image: none; font-size: 14px;
+}
+#new_professional_rating_badge .field textarea {
+	padding: 1px 3px; width: 222px;
+}
+#new_professional_rating_badge .field input.text {
+	padding: 1px 3px; width: 222px;
+}
+#new_professional_rating_badge .field input.email {
+	padding: 1px 3px; width: 222px;
+}
+#new_professional_rating_badge .field input.tel {
+	padding: 1px 3px; width: 222px;
+}
+#new_reviews_badge .field textarea {
+	padding: 1px 3px; width: 222px;
+}
+#new_reviews_badge .field input.text {
+	padding: 1px 3px; width: 222px;
+}
+#new_reviews_badge .field input.email {
+	padding: 1px 3px; width: 222px;
+}
+#new_reviews_badge .field input.tel {
+	padding: 1px 3px; width: 222px;
+}
+#new_top_contributor_badge .field textarea {
+	padding: 1px 3px; width: 222px;
+}
+#new_top_contributor_badge .field input.text {
+	padding: 1px 3px; width: 222px;
+}
+#new_top_contributor_badge .field input.email {
+	padding: 1px 3px; width: 222px;
+}
+#new_top_contributor_badge .field input.tel {
+	padding: 1px 3px; width: 222px;
+}
+#new_professional_rating_badge .field select {
+	padding: 1px 0px; width: 227px;
+}
+#new_reviews_badge .field select {
+	padding: 1px 0px; width: 227px;
+}
+#new_top_contributor_badge .field select {
+	padding: 1px 0px; width: 227px;
+}
+#new_professional_rating_badge .field.required .container {
+	width: 227px; border-left-color: rgb(185, 74, 72); border-left-width: 3px; border-left-style: solid;
+}
+#new_reviews_badge .field.required .container {
+	width: 227px; border-left-color: rgb(185, 74, 72); border-left-width: 3px; border-left-style: solid;
+}
+#new_top_contributor_badge .field.required .container {
+	width: 227px; border-left-color: rgb(185, 74, 72); border-left-width: 3px; border-left-style: solid;
+}
+#new_professional_rating_badge .field.required textarea {
+	width: 219px;
+}
+#new_professional_rating_badge .field.required input.text {
+	width: 219px;
+}
+#new_professional_rating_badge .field.required input.email {
+	width: 219px;
+}
+#new_professional_rating_badge .field.required input.tel {
+	width: 219px;
+}
+#new_reviews_badge .field.required textarea {
+	width: 219px;
+}
+#new_reviews_badge .field.required input.text {
+	width: 219px;
+}
+#new_reviews_badge .field.required input.email {
+	width: 219px;
+}
+#new_reviews_badge .field.required input.tel {
+	width: 219px;
+}
+#new_top_contributor_badge .field.required textarea {
+	width: 219px;
+}
+#new_top_contributor_badge .field.required input.text {
+	width: 219px;
+}
+#new_top_contributor_badge .field.required input.email {
+	width: 219px;
+}
+#new_top_contributor_badge .field.required input.tel {
+	width: 219px;
+}
+.badge_code_container {
+	clear: left;
+}

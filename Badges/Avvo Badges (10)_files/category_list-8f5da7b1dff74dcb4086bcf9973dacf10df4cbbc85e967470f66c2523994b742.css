@@ -1,0 +1,21 @@
+h3.category_header {
+	padding-bottom: 8px; font-weight: bold; margin-bottom: 8px; border-bottom-color: rgb(215, 218, 221); border-bottom-width: 1px; border-bottom-style: solid;
+}
+ul.category_list {
+	list-style: none; margin-left: 0px;
+}
+ul.category_list li {
+	padding: 2px 4px; line-height: 16px; margin-bottom: 4px;
+}
+ul.category_list li.sub_list {
+	margin-left: 12px;
+}
+ul.category_list li.selected {
+	background-color: rgb(0, 160, 200);
+}
+ul.category_list li.selected {
+	color: rgb(255, 255, 255);
+}
+ul.category_list li.selected a {
+	color: rgb(255, 255, 255);
+}
