@@ -31,6 +31,8 @@ public/site/.next/
 public/site/out/
 public/site/build/
 public/.next/
+# Claude Code internals
+.claude/
 "Unknown file.git/"
 
 # misc
