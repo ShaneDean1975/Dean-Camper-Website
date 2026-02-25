@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+**/node_modules
 /.pnp
 .pnp.*
 .yarn/*
@@ -15,10 +16,22 @@
 
 # next.js
 /.next/
+**/. next/
+**/.next/
 /out/
+**/out/
 
 # production
 /build
+**/build
+
+# Next.js / public site build artifacts
+public/site/node_modules/
+public/site/.next/
+public/site/out/
+public/site/build/
+public/.next/
+"Unknown file.git/"
 
 # misc
 .DS_Store
