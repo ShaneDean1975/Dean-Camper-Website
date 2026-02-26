@@ -26,7 +26,11 @@
       "Bash(git commit:*)",
       "Bash(xargs:*)",
       "Bash(find:*)",
-      "Bash(start \"\" \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\index.html\")"
+      "Bash(start \"\" \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\index.html\")",
+      "Bash(dir:*)",
+      "WebFetch(domain:www.deancamper.com)",
+      "WebFetch(domain:leadiq.com)",
+      "WebFetch(domain:www.chamberofcommerce.com)"
     ]
   }
 }
