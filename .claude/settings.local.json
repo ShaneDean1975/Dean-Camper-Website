@@ -25,7 +25,8 @@
       "Bash(ssh:*)",
       "Bash(git commit:*)",
       "Bash(xargs:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(start \"\" \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\index.html\")"
     ]
   }
 }
