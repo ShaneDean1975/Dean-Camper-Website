@@ -372,6 +372,63 @@
             .site-dropdown-menu a { color: rgba(255,255,255,0.85); padding-left: 2.5rem; }
             .site-dropdown-menu a:hover { background: rgba(255,255,255,0.05); color: #D4AF37; }
         }
+
+        /* ===== BADGE SCROLLING SECTION ===== */
+        .badges-section {
+            background: #fff;
+            padding: 24px 0 18px;
+            overflow: hidden;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+        .badges-section-title {
+            text-align: center;
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #5a6978;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 14px;
+        }
+        .badges-scroll-wrap {
+            position: relative;
+            overflow: hidden;
+        }
+        .badges-scroll-wrap::before,
+        .badges-scroll-wrap::after {
+            content: "";
+            position: absolute;
+            top: 0; height: 100%; width: 80px; z-index: 2; pointer-events: none;
+        }
+        .badges-scroll-wrap::before { left: 0; background: linear-gradient(to right, #fff, transparent); }
+        .badges-scroll-wrap::after  { right: 0; background: linear-gradient(to left,  #fff, transparent); }
+        .badges-track {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+            animation: badgeScroll 40s linear infinite;
+            width: fit-content;
+        }
+        .badges-track:hover { animation-play-state: paused; }
+        @keyframes badgeScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .badge-img-item { flex: 0 0 auto; text-align: center; padding: 6px 12px; }
+        .badge-img-item img {
+            height: 75px; width: auto; max-width: 130px;
+            object-fit: contain; display: block; margin: 0 auto;
+            filter: grayscale(15%); opacity: 0.88;
+            transition: opacity 0.2s, filter 0.2s;
+        }
+        .badge-img-item img:hover { opacity: 1; filter: grayscale(0%); }
+        @media (max-width: 768px) {
+            .badge-img-item img { height: 55px; }
+            .badges-track { gap: 16px; }
+            .badges-scroll-wrap::before,
+            .badges-scroll-wrap::after { width: 40px; }
+        }
 </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -427,6 +484,37 @@
         <p>Fighting denied claims, bad faith practices, and unfair settlements. We deal with insurance companies so you don't have to.</p>
         <a href="tel:8504333077" class="btn">Call Now - Free Consultation</a>
     </section>
+
+<!-- ===== BADGE SCROLLING SECTION ===== -->
+<section class="badges-section" aria-label="Awards and Recognition">
+    <p class="badges-section-title">Awards &amp; Recognition</p>
+    <div class="badges-scroll-wrap">
+        <div class="badges-track">
+            <div class="badge-img-item"><img src="Million_Dollar_Advocates_Forum.png" alt="Million Dollar Advocates Forum" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Multi_Million_Dollar_Advocates_Forum.png" alt="Multi-Million Dollar Advocates Forum" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Super_Lawyers.png" alt="Florida Super Lawyers Rising Stars" loading="lazy"></div>
+            <div class="badge-img-item"><img src="american_association_for_justice.png" alt="American Association for Justice" loading="lazy"></div>
+            <div class="badge-img-item"><img src="2015 Premier 100 Seal-AATA.png" alt="AATA Premier 100 Trial Attorneys" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Avvo 10.jpg" alt="AVVO 10.0 Superb Rating" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Avvo 10 car accident.jpg" alt="AVVO Top Car Accident Attorney" loading="lazy"></div>
+            <div class="badge-img-item"><img src="10 Best Award PI 2015.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
+            <div class="badge-img-item"><img src="10 BEST PIA.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Avvo (5 star reviews - Shane Dean).png" alt="AVVO 5-Star Client Reviews" loading="lazy"></div>
+            <!-- duplicate for seamless loop -->
+            <div class="badge-img-item"><img src="Million_Dollar_Advocates_Forum.png" alt="Million Dollar Advocates Forum" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Multi_Million_Dollar_Advocates_Forum.png" alt="Multi-Million Dollar Advocates Forum" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Super_Lawyers.png" alt="Florida Super Lawyers Rising Stars" loading="lazy"></div>
+            <div class="badge-img-item"><img src="american_association_for_justice.png" alt="American Association for Justice" loading="lazy"></div>
+            <div class="badge-img-item"><img src="2015 Premier 100 Seal-AATA.png" alt="AATA Premier 100 Trial Attorneys" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Avvo 10.jpg" alt="AVVO 10.0 Superb Rating" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Avvo 10 car accident.jpg" alt="AVVO Top Car Accident Attorney" loading="lazy"></div>
+            <div class="badge-img-item"><img src="10 Best Award PI 2015.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
+            <div class="badge-img-item"><img src="10 BEST PIA.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
+            <div class="badge-img-item"><img src="Avvo (5 star reviews - Shane Dean).png" alt="AVVO 5-Star Client Reviews" loading="lazy"></div>
+        </div>
+    </div>
+</section>
+
 
     <!-- Feature Photo -->
     <div style="width:100%; max-height:520px; overflow:hidden; line-height:0;">
