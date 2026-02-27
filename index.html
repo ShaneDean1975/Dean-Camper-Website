@@ -36,78 +36,36 @@
     <meta name="twitter:image" content="https://www.deancamper.com/dean-camper-logo-og.png">
 
     <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "LegalService",
-        "name": "Dean & Camper P.A.",
-        "alternateName": "Dean & Camper Injury Lawyers",
-        "description": "Personal injury law firm serving the Gulf Coast — Florida and Alabama. Specializing in car accidents, truck accidents, wrongful death, and all personal injury claims.",
-        "url": "https://www.deancamper.com",
-        "logo": "https://www.deancamper.com/dean-camper-logo.png",
-        "image": "https://www.deancamper.com/dean-camper-logo-og.png",
-        "priceRange": "Free Consultation — No Fee Unless We Win",
-        "telephone": [
-            "+18504333077",
-            "+18507963077",
-            "+18502697105",
-            "+12512830577"
-        ],
-        "areaServed": [
-            {"@type": "City", "name": "Pensacola", "containedInPlace": {"@type": "State", "name": "Florida"}},
-            {"@type": "City", "name": "Fort Walton Beach", "containedInPlace": {"@type": "State", "name": "Florida"}},
-            {"@type": "City", "name": "Destin", "containedInPlace": {"@type": "State", "name": "Florida"}},
-            {"@type": "City", "name": "Crestview", "containedInPlace": {"@type": "State", "name": "Florida"}},
-            {"@type": "City", "name": "Mobile", "containedInPlace": {"@type": "State", "name": "Alabama"}}
-        ],
-        "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Personal Injury Practice Areas",
-            "itemListElement": [
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Car Accident Injuries"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Truck Accident Injuries"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Motorcycle Accident Injuries"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Boat Accident Injuries"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Wrongful Death Claims"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Premises Liability"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Defective Product Injuries"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Dog Bite Injuries"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Auto Insurance Claims"}},
-                {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Other Personal Injuries"}}
-            ]
-        },
-        "aggregateRating": {
-            "@type": "AggregateRating",
-            "ratingValue": "5",
-            "ratingCount": "150"
-        }
-    }<script type="application/ld+json">
+<script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "Organization",
+      "@type": ["Organization","LegalService"],
       "@id": "https://www.deancamper.com/#organization",
       "name": "Dean & Camper, P.A.",
       "url": "https://www.deancamper.com/",
+      "logo": "https://www.deancamper.com/dean-camper-logo.png",
+      "image": "https://www.deancamper.com/dean-camper-logo-og.png",
       "telephone": "+1-850-433-3077",
-      "priceRange": "$$$",
-      "subOrganization": [
-        { "@id": "https://www.deancamper.com/#pensacola" },
-        { "@id": "https://www.deancamper.com/#fortwalton" },
-        { "@id": "https://www.deancamper.com/#destin" },
-        { "@id": "https://www.deancamper.com/#crestview" },
-        { "@id": "https://www.deancamper.com/#mobile" }
+      "priceRange": "Free Consultation — No Fee Unless We Win",
+      "areaServed": [
+        { "@type": "City", "name": "Pensacola" },
+        { "@type": "City", "name": "Fort Walton Beach" },
+        { "@type": "City", "name": "Destin" },
+        { "@type": "City", "name": "Crestview" },
+        { "@type": "City", "name": "Mobile" }
+      ],
+      "sameAs": [
+        "https://maps.app.goo.gl/JK7VXD6a7rKdNUyZ8"
       ]
     },
-
     {
       "@type": "LegalService",
       "@id": "https://www.deancamper.com/#pensacola",
       "name": "Dean & Camper, P.A. - Pensacola Office",
       "url": "https://www.deancamper.com/",
       "telephone": "+1-850-433-3077",
-      "priceRange": "$$$",
       "parentOrganization": { "@id": "https://www.deancamper.com/#organization" },
       "address": {
         "@type": "PostalAddress",
@@ -117,19 +75,19 @@
         "postalCode": "32502",
         "addressCountry": "US"
       },
-      "areaServed": { "@type": "City", "name": "Pensacola" },
-      "sameAs": [
-        "https://maps.app.goo.gl/JK7VXD6a7rKdNUyZ8?g_st=in"
-      ]
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 30.4213,
+        "longitude": -87.2169
+      },
+      "hasMap": "https://maps.app.goo.gl/JK7VXD6a7rKdNUyZ8"
     },
-
     {
       "@type": "LegalService",
       "@id": "https://www.deancamper.com/#fortwalton",
       "name": "Dean & Camper, P.A. - Fort Walton Beach Office",
       "url": "https://www.deancamper.com/",
       "telephone": "+1-850-796-3077",
-      "priceRange": "$$$",
       "parentOrganization": { "@id": "https://www.deancamper.com/#organization" },
       "address": {
         "@type": "PostalAddress",
@@ -138,34 +96,28 @@
         "addressRegion": "FL",
         "postalCode": "32547",
         "addressCountry": "US"
-      },
-      "areaServed": { "@type": "City", "name": "Fort Walton Beach" }
+      }
     },
-
     {
       "@type": "LegalService",
       "@id": "https://www.deancamper.com/#destin",
       "name": "Dean & Camper, P.A. - Destin Office",
       "url": "https://www.deancamper.com/",
       "telephone": "+1-850-269-7105",
-      "priceRange": "$$$",
       "parentOrganization": { "@id": "https://www.deancamper.com/#organization" },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Destin",
         "addressRegion": "FL",
         "addressCountry": "US"
-      },
-      "areaServed": { "@type": "City", "name": "Destin" }
+      }
     },
-
     {
       "@type": "LegalService",
       "@id": "https://www.deancamper.com/#crestview",
       "name": "Dean & Camper, P.A. - Crestview Office",
       "url": "https://www.deancamper.com/",
       "telephone": "+1-850-796-3077",
-      "priceRange": "$$$",
       "parentOrganization": { "@id": "https://www.deancamper.com/#organization" },
       "address": {
         "@type": "PostalAddress",
@@ -177,32 +129,27 @@
       },
       "geo": {
         "@type": "GeoCoordinates",
-        "latitude": "30.7643",
-        "longitude": "-86.5705"
-      },
-      "areaServed": { "@type": "City", "name": "Crestview" }
+        "latitude": 30.7643,
+        "longitude": -86.5705
+      }
     },
-
     {
       "@type": "LegalService",
       "@id": "https://www.deancamper.com/#mobile",
       "name": "Dean & Camper, P.A. - Mobile Office",
       "url": "https://www.deancamper.com/",
       "telephone": "+1-251-283-0577",
-      "priceRange": "$$$",
       "parentOrganization": { "@id": "https://www.deancamper.com/#organization" },
       "address": {
         "@type": "PostalAddress",
         "addressLocality": "Mobile",
         "addressRegion": "AL",
         "addressCountry": "US"
-      },
-      "areaServed": { "@type": "City", "name": "Mobile" }
+      }
     }
   ]
 }
 </script>
-    </script>
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1325,18 +1272,7 @@
     📞 Call Now • Free Consultation
   </button>
 </div>
-<!-- Optional: Local SEO structured data (helps Google understand your business)
-     Note: this includes the phone number in the page source for search engines.
-     If you do NOT want it in source at all, remove this block. -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "LegalService",
-  "name": "Dean & Camper P.A.",
-  "areaServed": ["Florida", "Alabama"],
-  "telephone": "+1-850-384-4477"
-}
-</script>
+
 
 <section style="padding:40px 20px; text-align:center; background:#F8F6F1;">
     <h2 style="font-family:'Playfair Display', serif; margin-bottom:20px;">
