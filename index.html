@@ -1101,6 +1101,46 @@
             .btn { text-align: center; }
             .trust-bar { padding: 16px 0; }
         }
+
+        /* Sticky mobile call bar */
+        .sticky-callbar {
+            position: fixed;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 12px;
+            background: rgba(10,31,61,0.98);
+            display: none;
+            z-index: 9999;
+        }
+        .sticky-callbtn {
+            width: 100%;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: 800;
+            background: var(--gold);
+            color: var(--primary-navy);
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        @media (max-width: 768px) {
+            .sticky-callbar {
+                display: block;
+            }
+            .hero {
+                padding-bottom: 90px;
+            }
+        }
+        /* Subtle pulse animation for call button */
+        #callNowBtn {
+            animation: pulse 2.2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(212,175,55,0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(212,175,55,0); }
+            100% { box-shadow: 0 0 0 0 rgba(212,175,55,0); }
+        }
     </style>
 </head>
 <body>
