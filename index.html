@@ -654,27 +654,6 @@
             position: relative;
         }
 
-        .results-scroll-wrap::before,
-        .results-scroll-wrap::after {
-            content: '';
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            width: 80px;
-            z-index: 2;
-            pointer-events: none;
-        }
-
-        .results-scroll-wrap::before {
-            left: 0;
-            background: linear-gradient(to right, var(--cream), transparent);
-        }
-
-        .results-scroll-wrap::after {
-            right: 0;
-            background: linear-gradient(to left, var(--cream), transparent);
-        }
-
         .results-track {
             display: inline-flex;
             gap: 16px;
@@ -1488,7 +1467,7 @@
 <!-- ===== RESULTS ===== -->
 <section class="results">
     <div class="section-header">
-        <h2 class="section-title">Verdicts &amp; Settlements</h2>
+        <h2 class="section-title">Jury Verdicts &amp; Settlements</h2>
         <p class="section-subtitle">Our track record speaks for itself. We've recovered millions for injury victims across the Gulf Coast.</p>
     </div>
 
