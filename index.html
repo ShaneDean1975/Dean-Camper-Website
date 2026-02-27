@@ -1197,26 +1197,58 @@
 </header>
 
 <!-- ===== HERO ===== -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>
-            Experienced and Highly Ranked Local Car, Truck, Motorcycle &amp; Personal Injury Lawyers
-        </h1>
-        <p style="font-size:1.2rem; margin-top:10px;">
-            Serving injured clients throughout Florida &amp; Alabama.
-        </p>
-        <div class="cta-buttons" style="margin-top:30px;">
-            <a href="#" id="callNowBtn" class="btn btn-primary">
-                📞 Call Now
-            </a>
-        </div>
-        <div style="margin-top:25px; font-size:1.15rem; line-height:1.8;">
-            <strong>24/7</strong><br>
-            Free Consultations<br>
-            No Fees Unless You Win | Si Hablo Español
-        </div>
+<header class="hero-header" role="banner">
+  <div class="hero-inner">
+    <!-- SEO: Keep a single H1 per page -->
+    <h1 class="hero-title">
+      Experienced and Highly Ranked Local Car, Truck, Motorcycle &amp; Personal Injury Lawyers
+    </h1>
+    <!-- Optional supporting line for clarity + keywords (SEO friendly) -->
+    <p class="hero-kicker">
+      Serving injured clients across Florida &amp; Alabama
+    </p>
+    <div class="hero-cta">
+      <!-- Button: phone number is NOT visible; tel link is built on click via JS -->
+      <a
+        href="#"
+        class="call-button"
+        id="callNowBtn"
+        aria-label="Call now for a free consultation"
+      >
+        📞 Call Now
+      </a>
+      <ul class="hero-points" aria-label="Firm highlights">
+        <li><strong>24/7</strong></li>
+        <li><strong>Free Consultations</strong></li>
+        <li><strong>No Fees Unless You Win</strong> | Si Hablo Español</li>
+      </ul>
+      <!-- Trust / conversion boosters (optional but recommended) -->
+      <div class="trust-row" aria-label="Trust indicators">
+        <span class="trust-pill">No Upfront Costs</span>
+        <span class="trust-pill">Contingency Fee</span>
+        <span class="trust-pill">Local Representation</span>
+      </div>
     </div>
-</section>
+  </div>
+</header>
+<!-- Sticky mobile call bar (conversion boost) -->
+<div class="sticky-callbar" role="complementary" aria-label="Call bar">
+  <button class="sticky-callbtn" id="stickyCallBtn" aria-label="Call now">
+    📞 Call Now • Free Consultation
+  </button>
+</div>
+<!-- Optional: Local SEO structured data (helps Google understand your business)
+     Note: this includes the phone number in the page source for search engines.
+     If you do NOT want it in source at all, remove this block. -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Dean & Camper P.A.",
+  "areaServed": ["Florida", "Alabama"],
+  "telephone": "+1-850-384-4477"
+}
+</script>
 
 <section style="padding:40px 20px; text-align:center; background:#F8F6F1;">
     <h2 style="font-family:'Playfair Display', serif; margin-bottom:20px;">
@@ -1739,11 +1771,6 @@
     })();
 </script>
 
-<div class="sticky-callbar">
-    <button id="stickyCallBtn" class="sticky-callbtn">
-        📞 Call Now • Free Consultation
-    </button>
-</div>
 
 </body>
 </html>
