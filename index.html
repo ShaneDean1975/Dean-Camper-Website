@@ -1156,38 +1156,8 @@
           font-size: 14px;
           white-space: nowrap;
         }
-        /* ===== STICKY MOBILE CALL BAR ===== */
-        .sticky-callbar {
-          position: fixed;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          padding: 10px 12px;
-          background: rgba(12, 35, 64, 0.95);
-          backdrop-filter: blur(8px);
-          display: none;
-          z-index: 9999;
-          border-top: 1px solid rgba(255, 255, 255, 0.14);
-        }
-        .sticky-callbtn {
-          width: 100%;
-          border: 0;
-          border-radius: 10px;
-          padding: 14px 12px;
-          font-size: 16px;
-          font-weight: 900;
-          background: #c8102e;
-          color: #fff;
-          box-shadow: 0 10px 22px rgba(0, 0, 0, 0.25);
-        }
         /* Mobile behavior */
         @media (max-width: 768px) {
-          .hero-header {
-            padding-bottom: 88px;
-          }
-          .sticky-callbar {
-            display: block;
-          }
           .hero-points {
             font-size: 16px;
           }
@@ -1313,12 +1283,6 @@
     </h1>
   </div>
 </header>
-<!-- Sticky mobile call bar (conversion boost) -->
-<div class="sticky-callbar" role="complementary" aria-label="Call bar">
-  <button class="sticky-callbtn" id="stickyCallBtn" aria-label="Call now">
-    📞 Call Now • Free Consultation
-  </button>
-</div>
 
 
 <section style="padding:18px 20px; text-align:center; background:#F8F6F1;">
@@ -1841,9 +1805,7 @@
     if (headerBtn) headerBtn.addEventListener("click", callNowHeader);
 
     const btn = document.getElementById("callNowBtn");
-    const stickyBtn = document.getElementById("stickyCallBtn");
     if (btn) btn.addEventListener("click", callNow);
-    if (stickyBtn) stickyBtn.addEventListener("click", callNow);
   })();
 </script>
 
