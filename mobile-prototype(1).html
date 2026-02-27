@@ -178,5 +178,16 @@
     }
   }
 </script>
+<script>
+  (function () {
+    var parts = ["850", "433", "3077"];
+    var tel = "tel:" + parts.join("");
+    function callNow(e) { e.preventDefault(); window.location.href = tel; }
+    var headerBtn = document.getElementById("headerCallBtn");
+    var stickyBtn = document.getElementById("stickyCallBtn");
+    if (headerBtn) headerBtn.addEventListener("click", callNow);
+    if (stickyBtn) stickyBtn.addEventListener("click", callNow);
+  })();
+</script>
 </body>
 </html>
