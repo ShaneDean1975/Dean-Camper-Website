@@ -30,7 +30,12 @@
       "Bash(dir:*)",
       "WebFetch(domain:www.deancamper.com)",
       "WebFetch(domain:leadiq.com)",
-      "WebFetch(domain:www.chamberofcommerce.com)"
+      "WebFetch(domain:www.chamberofcommerce.com)",
+      "Bash(Si Habla Español\" retained as supporting text:*)",
+      "Bash(magick:*)",
+      "Bash(convert:*)",
+      "Bash(pip install:*)",
+      "Bash(head:*)"
     ]
   }
 }
