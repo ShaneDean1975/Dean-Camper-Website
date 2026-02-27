@@ -77,16 +77,16 @@ h1,h2,h3,h4,h5,h6 { font-family: 'Playfair Display', Georgia, serif; }
 body { font-family: 'Work Sans', sans-serif; color: var(--text-dark); line-height: 1.6; background: var(--white); }
 
 /* ===== SITE HEADER ===== */
-.site-header { position: sticky; top: 0; z-index: 1000; background: linear-gradient(180deg, #122d55 0%, #0A1F3D 55%, #071628 100%); box-shadow: 0 2px 20px rgba(0,0,0,0.28); font-family: 'Work Sans', sans-serif; }
+.site-header { position: sticky; top: 0; z-index: 1000; background: #213770; box-shadow: 0 2px 20px rgba(0,0,0,0.28); font-family: 'Work Sans', sans-serif; }
 .site-header-top { background: linear-gradient(135deg, #050F1C 0%, #0A1F3D 100%); padding: 0.55rem 2rem; text-align: center; font-size: 0.85rem; }
 .site-header-top p { color: rgba(255,255,255,0.9); margin: 0; }
 .site-header-top a { color: rgba(255,255,255,0.9); text-decoration: none; font-weight: 600; }
 .site-header-top a:hover { color: #E8C96A; }
 .header-call-btn { background: #c8102e; color: #fff; border: none; border-radius: 4px; padding: 0.3rem 0.9rem; font-size: 0.82rem; font-weight: 700; cursor: pointer; letter-spacing: 0.02em; transition: background 0.2s; vertical-align: middle; }
 .header-call-btn:hover { background: #a50d26; }
-.site-nav-container { max-width: 1400px; margin: 0 auto; padding: 0.4rem 2rem; display: flex; justify-content: space-between; align-items: center; }
+.site-nav-container { max-width: 1400px; margin: 0 auto; padding: 0 2rem; display: flex; justify-content: space-between; align-items: center; }
 .site-logo-link { display: flex; align-items: center; text-decoration: none; }
-.site-logo-link img { max-height: 58px; width: auto; display: block; }
+.site-logo-link img { height: 52px; max-height: none; width: auto; display: block; }
 .site-nav-links { display: flex; list-style: none; gap: 1.4rem; align-items: center; margin: 0; padding: 0; }
 .site-nav-links > li { position: relative; }
 .site-nav-links > li:not(:last-child)::after { content: ''; position: absolute; right: -0.78rem; top: 15%; height: 70%; width: 1px; background: linear-gradient(180deg, transparent, rgba(212,175,55,0.55) 30%, rgba(212,175,55,0.55) 70%, transparent); pointer-events: none; }
@@ -299,7 +299,7 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
     <nav>
         <div class="site-nav-container">
             <a href="index.html" class="site-logo-link" aria-label="Dean &amp; Camper P.A. &mdash; Home">
-                <img src="blue-logo.svg" alt="Dean &amp; Camper P.A. Injury Lawyers" height="44" style="display:block">
+                <img src="blue-logo.svg" alt="Dean &amp; Camper P.A. Injury Lawyers" style="display:block">
             </a>
             <button class="site-mobile-toggle" aria-label="Toggle navigation menu">&#9776;</button>
             <ul class="site-nav-links" id="siteMainNav">
