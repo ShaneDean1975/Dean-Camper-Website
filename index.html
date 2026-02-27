@@ -1295,7 +1295,7 @@
 <section class="badges-section" aria-label="Awards and Recognition">
     <p class="badges-section-title">Awards &amp; Recognition</p>
     <div class="badges-scroll-wrap">
-        <div class="badges-track">
+        <div class="badges-track" id="badgesTrack">
             <div class="badge-img-item"><img src="Million_Dollar_Advocates_Forum.png" alt="Million Dollar Advocates Forum" loading="lazy"></div>
             <div class="badge-img-item"><img src="Multi_Million_Dollar_Advocates_Forum.png" alt="Multi-Million Dollar Advocates Forum" loading="lazy"></div>
             <div class="badge-img-item"><img src="Super_Lawyers.png" alt="Florida Super Lawyers Rising Stars" loading="lazy"></div>
@@ -1477,7 +1477,7 @@
     </div>
 
     <div class="results-scroll-wrap">
-        <div class="results-track">
+        <div class="results-track" id="resultsTrack">
             <!-- Set 1 -->
             <div class="result-card">
                 <div class="result-amount">$3.5M</div>
@@ -1809,6 +1809,35 @@
   })();
 </script>
 
+<script>
+  /* Shuffle scrolling tracks on every page load */
+  (function () {
+    function shuffle(arr) {
+      for (var i = arr.length - 1; i > 0; i--) {
+        var j = Math.floor(Math.random() * (i + 1));
+        var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+      }
+      return arr;
+    }
+    function randomiseTrack(trackId) {
+      var track = document.getElementById(trackId);
+      if (!track) return;
+      var items = Array.from(track.children);
+      var half = Math.floor(items.length / 2);
+      /* Grab only the first (canonical) set and shuffle it */
+      var originals = items.slice(0, half);
+      shuffle(originals);
+      /* Rebuild: shuffled set 1 + cloned shuffled set 2 (keeps seamless loop) */
+      track.innerHTML = '';
+      originals.forEach(function (el) { track.appendChild(el); });
+      originals.forEach(function (el) { track.appendChild(el.cloneNode(true)); });
+    }
+    document.addEventListener('DOMContentLoaded', function () {
+      randomiseTrack('resultsTrack');
+      randomiseTrack('badgesTrack');
+    });
+  })();
+</script>
 
 </body>
 </html>
