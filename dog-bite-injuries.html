@@ -244,7 +244,7 @@
         .badges-track {
             display: flex;
             align-items: center;
-            gap: 28px;
+            gap: 0;
             animation: badgeScroll 40s linear infinite;
             width: fit-content;
         }
@@ -253,17 +253,17 @@
             0%   { transform: translateX(0); }
             100% { transform: translateX(-50%); }
         }
-        .badge-img-item { flex: 0 0 auto; text-align: center; padding: 6px 12px; }
+        .badge-img-item { flex: 0 0 auto; text-align: center; padding: 0; }
         .badge-img-item img {
-            height: 75px; width: auto; max-width: 130px;
+            height: 87px; width: auto; max-width: none;
             object-fit: contain; display: block; margin: 0 auto;
             filter: grayscale(15%); opacity: 0.88;
             transition: opacity 0.2s, filter 0.2s;
         }
         .badge-img-item img:hover { opacity: 1; filter: grayscale(0%); }
         @media (max-width: 768px) {
-            .badge-img-item img { height: 55px; }
-            .badges-track { gap: 16px; }
+            .badge-img-item img { height: 67px; }
+            .badges-track { gap: 0; }
             .badges-scroll-wrap::before,
             .badges-scroll-wrap::after { width: 40px; }
         }
