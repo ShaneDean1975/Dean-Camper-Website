@@ -684,6 +684,14 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
         });
     });
 
+    // Header Call Now button
+    (function () {
+        var parts = ["850", "433", "3077"];
+        var tel = "tel:" + parts.join("");
+        var btn = document.getElementById("headerCallBtn");
+        if (btn) btn.addEventListener("click", function (e) { e.preventDefault(); window.location.href = tel; });
+    })();
+
     // Contact form validation
     document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
