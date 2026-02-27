@@ -1827,10 +1827,9 @@
       originals.forEach(function (el) { track.appendChild(el); });
       originals.forEach(function (el) { track.appendChild(el.cloneNode(true)); });
     }
-    document.addEventListener('DOMContentLoaded', function () {
-      randomiseTrack('resultsTrack');
-      randomiseTrack('badgesTrack');
-    });
+    /* Script is at bottom of <body> — DOM already parsed, call directly */
+    randomiseTrack('resultsTrack');
+    randomiseTrack('badgesTrack');
   })();
 </script>
 
