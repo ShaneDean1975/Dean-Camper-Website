@@ -454,7 +454,24 @@
             .badges-scroll-wrap::before,
             .badges-scroll-wrap::after { width: 40px; }
         }
-</style>
+
+        /* ===== CTA SECTION (city-page style) ===== */
+        .cta-section { background: linear-gradient(135deg, #0A1F3D 0%, #1A3A5C 100%); color: white; text-align: center; padding: 2.5rem 2rem; }
+        .cta-section h2 { font-size: 2.5rem; color: #D4AF37; margin-bottom: 0.75rem; font-family: 'Playfair Display', serif; }
+        .cta-section p { font-size: 1.1rem; max-width: 700px; margin: 0 auto 1rem; opacity: 0.9; font-family: 'Work Sans', sans-serif; }
+        .office-phones { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1.2rem; max-width: 1000px; margin: 2.5rem auto; }
+        .office-phone-item { background: rgba(255,255,255,0.1); border-radius: 8px; padding: 1rem 1.2rem; text-align: center; transition: background 0.2s; }
+        .office-phone-item:hover { background: rgba(255,255,255,0.18); }
+        .office-phone-item strong { display: block; font-size: 0.85rem; color: #D4AF37; margin-bottom: 0.4rem; font-family: 'Work Sans', sans-serif; text-transform: uppercase; letter-spacing: 0.05em; }
+        .office-phone-item a { color: white; text-decoration: none; font-size: 1.05rem; font-weight: 600; font-family: 'Work Sans', sans-serif; }
+        .office-phone-item a:hover { color: #D4AF37; }
+        .spanish-text { font-size: 1rem; color: rgba(255,255,255,0.9); margin-top: 1rem !important; }
+        .btn-primary { display: inline-block; background: #D4AF37; color: #0A1F3D; padding: 1.1rem 2.5rem; border-radius: 4px; text-decoration: none; font-weight: 600; transition: all 0.3s; font-size: 1.05rem; border: 2px solid #D4AF37; font-family: 'Work Sans', sans-serif; }
+        .btn-primary:hover { background: #E8C96A; border-color: #E8C96A; transform: translateY(-2px); }
+        @media (max-width: 768px) { .cta-section h2 { font-size: 1.8rem; } .office-phones { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 480px) { .office-phones { grid-template-columns: 1fr 1fr; } }
+
+    </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -734,19 +751,35 @@
         </ul>
     </section>
     
-    <section class="cta-section">
-        <h2>Get Your Free Consultation Today</h2>
-        <p>Don't wait to get the legal help you deserve. Contact us now for a free, no-obligation consultation. Available 24/7.</p>
-        <div class="contact-phones">
-            <a href="tel:8504333077">Pensacola: (850) 433-3077</a>
-            <a href="tel:8507963077">Fort Walton Beach: (850) 796-3077</a>
-            <a href="tel:8502697105">Destin: (850) 269-7105</a>
-            <a href="tel:8507963077">Crestview: (850) 796-3077</a>
-            <a href="tel:2512830577">Mobile: (251) 283-0577</a>
+<section class="cta-section">
+    <h2>Free Consultation &mdash; No Fees Unless We Win</h2>
+    <p>Our attorneys are available 24/7. Call any of our offices or fill out our online form for a free case review.</p>
+    <div class="office-phones">
+        <div class="office-phone-item">
+            <strong>Pensacola</strong>
+            <a href="tel:8504333077">(850) 433-3077</a>
         </div>
-        <p class="spanish-notice">Si Hablo Espa&ntilde;ol</p>
-        <p class="no-fee">No Fees Unless We Win &nbsp;|&nbsp; Free Consultation &nbsp;|&nbsp; Available 24/7</p>
-    </section>
+        <div class="office-phone-item">
+            <strong>Fort Walton Beach</strong>
+            <a href="tel:8507963077">(850) 796-3077</a>
+        </div>
+        <div class="office-phone-item">
+            <strong>Destin</strong>
+            <a href="tel:8502697105">(850) 269-7105</a>
+        </div>
+        <div class="office-phone-item">
+            <strong>Crestview</strong>
+            <a href="tel:8507963077">(850) 796-3077</a>
+        </div>
+        <div class="office-phone-item">
+            <strong>Mobile, AL</strong>
+            <a href="tel:2512830577">(251) 283-0577</a>
+        </div>
+    </div>
+    <a href="contact.html" class="btn-primary">Contact Us Online</a>
+    <p class="spanish-text">Si Habla Espa&ntilde;ol</p>
+    <p style="margin-top:1rem;font-size:1rem;opacity:0.85;">No Fees Unless We Win Your Case</p>
+</section>
 
     <footer>
         <div class="footer-content">
