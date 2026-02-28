@@ -155,7 +155,7 @@
 
         /* Page Hero */
         .page-hero {
-            background: linear-gradient(135deg, #0A1F3D 0%, #2d4a8f 100%);
+            background: linear-gradient(135deg, #0A1F3D 0%, #153455 100%);
             color: white;
             padding: 3rem 2rem 2.5rem;
             text-align: center;
@@ -607,6 +607,81 @@
         @media (max-width: 768px) { .cta-section h2 { font-size: 1.8rem; } .office-phones { grid-template-columns: repeat(2, 1fr); } }
         @media (max-width: 480px) { .office-phones { grid-template-columns: 1fr 1fr; } }
 
+    
+        /* ===== CASE EVAL MODAL ===== */
+        .eval-modal-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(10,20,50,0.72); z-index: 9000;
+            align-items: center; justify-content: center; padding: 1rem;
+        }
+        .eval-modal-overlay.open { display: flex; }
+        .eval-modal {
+            background: #fff; border-radius: 10px; max-width: 680px;
+            width: 100%; max-height: 90vh; overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.38); position: relative;
+        }
+        .eval-modal-header {
+            background: linear-gradient(135deg, #1a2a6c 0%, #213770 100%);
+            color: #fff; padding: 1.4rem 2rem 1.2rem;
+            border-radius: 10px 10px 0 0; position: relative;
+        }
+        .eval-modal-header h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.45rem;
+            margin: 0 2.5rem 0.3rem 0; color: #fff;
+        }
+        .eval-modal-header p { margin: 0; font-size: 0.88rem; color: rgba(255,255,255,0.82); }
+        .eval-modal-close {
+            position: absolute; top: 0.9rem; right: 1.1rem;
+            background: none; border: none; color: rgba(255,255,255,0.75);
+            font-size: 1.8rem; cursor: pointer; line-height: 1;
+            padding: 0.1rem 0.4rem; transition: color 0.2s;
+        }
+        .eval-modal-close:hover { color: #fff; }
+        .eval-modal-body { padding: 1.8rem 2rem; }
+        .eval-form-grid {
+            display: grid; grid-template-columns: 1fr 1fr;
+            gap: 1.1rem; margin-bottom: 1.2rem;
+        }
+        .eval-form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+        .eval-form-group.full { grid-column: 1 / -1; }
+        .eval-form-group label {
+            font-family: 'Work Sans', sans-serif;
+            font-weight: 600; font-size: 0.88rem; color: #0f1419;
+        }
+        .eval-required { color: #dc3545; margin-left: 0.15rem; }
+        .eval-form-group input, .eval-form-group select, .eval-form-group textarea {
+            padding: 0.65rem 0.9rem; border: 1.5px solid #d0dae6;
+            border-radius: 5px; font-size: 0.95rem;
+            font-family: 'Work Sans', sans-serif; color: #0f1419;
+            background: #fff; transition: border-color 0.2s;
+        }
+        .eval-form-group input:focus, .eval-form-group select:focus,
+        .eval-form-group textarea:focus { outline: none; border-color: #213770; }
+        .eval-form-group textarea { resize: vertical; min-height: 88px; }
+        .eval-submit-btn {
+            width: 100%; background: #c8102e; color: #fff;
+            border: none; border-radius: 6px; padding: 1rem 2rem;
+            font-size: 1.05rem; font-weight: 700; font-family: 'Work Sans', sans-serif;
+            cursor: pointer; letter-spacing: 0.02em; transition: background 0.2s;
+        }
+        .eval-submit-btn:hover { background: #a50d26; }
+        .eval-form-note {
+            text-align: center; color: #5a6978;
+            font-size: 0.84rem; margin-top: 0.9rem;
+        }
+        .eval-success { display: none; text-align: center; padding: 2rem 1rem; }
+        .eval-success h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem; color: #16a34a; margin-bottom: 0.8rem;
+        }
+        .eval-success p { color: #5a6978; font-size: 1rem; }
+        @media (max-width: 600px) {
+            .eval-form-grid { grid-template-columns: 1fr; }
+            .eval-modal-body { padding: 1.2rem; }
+            .eval-modal-header { padding: 1.1rem 1.2rem; }
+            .eval-modal-header h3 { font-size: 1.15rem; }
+        }
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
@@ -660,7 +735,7 @@
     <section class="page-hero">
         <h1>Car Accident Injury Lawyers</h1>
         <p>Injured in a car accident? Our experienced attorneys have recovered over $50 million for accident victims across Florida and Alabama. We fight for maximum compensation so you can focus on your recovery.</p>
-        <a href="tel:+18504333077" class="btn-primary">📞 Free Consultation - Call Now</a>
+        <button class="btn-primary openEvalModal">Request a Free Claim Evaluation Now</button>
     </section>
 
 <section style="padding:7px 20px; text-align:center; background:#c8102e;">
@@ -998,6 +1073,120 @@
     if (headerBtn) headerBtn.addEventListener("click", callNow);
     if (stickyBtn) stickyBtn.addEventListener("click", callNow);
   })();
+</script>
+
+<!-- ===== CASE EVALUATION MODAL ===== -->
+<div class="eval-modal-overlay" id="evalModalOverlay" role="dialog" aria-modal="true" aria-labelledby="evalModalTitle">
+    <div class="eval-modal">
+        <div class="eval-modal-header">
+            <h3 id="evalModalTitle">Request Your Free Claim Evaluation</h3>
+            <p>No fees unless we win &mdash; confidential &amp; protected by attorney-client privilege</p>
+            <button class="eval-modal-close" id="closeEvalModal" aria-label="Close">&times;</button>
+        </div>
+        <div class="eval-modal-body">
+            <div class="eval-success" id="evalSuccess">
+                <h4>&#10003; Request Received!</h4>
+                <p>Thank you. A member of our team will contact you shortly to discuss your case.</p>
+            </div>
+            <form id="evalForm" action="/submit-contact" method="POST" novalidate>
+                <div class="eval-form-grid">
+                    <div class="eval-form-group">
+                        <label for="eval-fname">First Name<span class="eval-required">*</span></label>
+                        <input type="text" id="eval-fname" name="first-name" required autocomplete="given-name">
+                    </div>
+                    <div class="eval-form-group">
+                        <label for="eval-lname">Last Name<span class="eval-required">*</span></label>
+                        <input type="text" id="eval-lname" name="last-name" required autocomplete="family-name">
+                    </div>
+                    <div class="eval-form-group">
+                        <label for="eval-phone">Phone Number<span class="eval-required">*</span></label>
+                        <input type="tel" id="eval-phone" name="phone" required autocomplete="tel" placeholder="(850) 000-0000">
+                    </div>
+                    <div class="eval-form-group">
+                        <label for="eval-email">Email Address<span class="eval-required">*</span></label>
+                        <input type="email" id="eval-email" name="email" required autocomplete="email" placeholder="you@example.com">
+                    </div>
+                    <div class="eval-form-group full">
+                        <label for="eval-case-type">Type of Case<span class="eval-required">*</span></label>
+                        <select id="eval-case-type" name="case-type" required>
+                            <option value="">Please select...</option>
+                            <option value="car-accident">Car Accident</option>
+                            <option value="truck-accident">Truck Accident</option>
+                            <option value="motorcycle-accident">Motorcycle Accident</option>
+                            <option value="boat-accident">Boat Accident</option>
+                            <option value="slip-fall">Slip and Fall</option>
+                            <option value="wrongful-death">Wrongful Death</option>
+                            <option value="dog-bite">Dog Bite</option>
+                            <option value="defective-product">Defective Product</option>
+                            <option value="insurance-claim">Auto Insurance Claim</option>
+                            <option value="other">Other Personal Injury</option>
+                        </select>
+                    </div>
+                    <div class="eval-form-group full">
+                        <label for="eval-office">Nearest Office</label>
+                        <select id="eval-office" name="office">
+                            <option value="">Select a location...</option>
+                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
+                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
+                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
+                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
+                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
+                        </select>
+                    </div>
+                    <div class="eval-form-group full">
+                        <label for="eval-message">Brief Description of Your Case<span class="eval-required">*</span></label>
+                        <textarea id="eval-message" name="message" required placeholder="Please describe what happened, where, and any injuries sustained..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="eval-submit-btn">Send My Free Claim Evaluation Request</button>
+                <p class="eval-form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+(function () {
+    var overlay = document.getElementById('evalModalOverlay');
+    var closeBtn = document.getElementById('closeEvalModal');
+    var form = document.getElementById('evalForm');
+    var success = document.getElementById('evalSuccess');
+
+    function openModal() {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.openEvalModal').forEach(function(btn) {
+        btn.addEventListener('click', openModal);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var ok = true;
+            form.querySelectorAll('[required]').forEach(function (el) {
+                if (!el.value.trim()) {
+                    el.style.borderColor = '#dc3545'; ok = false;
+                } else { el.style.borderColor = ''; }
+            });
+            if (!ok) return;
+            form.style.display = 'none';
+            success.style.display = 'block';
+        });
+    }
+})();
 </script>
 </body>
 </html>
