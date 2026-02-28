@@ -36,7 +36,8 @@
       "Bash(convert:*)",
       "Bash(pip install:*)",
       "Bash(head:*)",
-      "Bash(python:*)"
+      "Bash(python:*)",
+      "Bash(del:*)"
     ]
   }
 }
