@@ -548,7 +548,6 @@
         }
 
     
-        /* ===== NAV OVERRIDE: truck-accident standard ===== */
         .site-header { position: sticky; top: 0; z-index: 1000; background: #213770; box-shadow: 0 2px 20px rgba(0,0,0,0.28); font-family: 'Work Sans', sans-serif; }
         .site-header-top { background: linear-gradient(135deg, #050F1C 0%, #0A1F3D 100%); padding: 0.6rem 2rem; text-align: center; font-size: 0.875rem; }
         .site-header-top p { color: #D4AF37; margin: 0; }
@@ -584,23 +583,62 @@
             .site-btn-nav { display: block; margin: 0.5rem 1.5rem; padding: 0.75rem 1rem !important; text-align: center; }
         }
 
+    
+        /* ══════════════════════════════════════════════════
+           CANONICAL NAV — truck-accident standard
+           !important on layout props beats any legacy rule
+        ══════════════════════════════════════════════════ */
+        header.site-header{position:sticky!important;top:0!important;z-index:1000!important;background:#213770!important;box-shadow:0 2px 20px rgba(0,0,0,0.28)!important;font-family:'Work Sans',sans-serif!important;padding:0!important;margin:0!important;}
+        header.site-header nav{background:transparent!important;padding:0!important;margin:0!important;}
+        .site-header-top{background:linear-gradient(135deg,#050F1C 0%,#0A1F3D 100%)!important;padding:0.6rem 2rem!important;text-align:center!important;font-size:0.875rem!important;}
+        .site-header-top p{color:#D4AF37!important;margin:0!important;font-size:inherit!important;}
+        .site-header-top a{color:rgba(255,255,255,0.9)!important;text-decoration:none!important;font-weight:600!important;}
+        .header-call-btn{background:#D4AF37!important;color:#0A1F3D!important;border:none!important;border-radius:4px!important;padding:0.3rem 0.9rem!important;font-size:0.82rem!important;font-weight:700!important;cursor:pointer!important;transition:background 0.2s!important;vertical-align:middle!important;letter-spacing:0.02em!important;}
+        .header-call-btn:hover{background:#E8C96A!important;}
+        .site-nav-container{max-width:1400px!important;margin:0 auto!important;padding:0 2rem!important;display:flex!important;justify-content:space-between!important;align-items:center!important;}
+        .site-logo-link{display:flex!important;align-items:center!important;text-decoration:none!important;}
+        .site-logo-link img{height:52px!important;max-height:none!important;width:auto!important;display:block!important;}
+        .site-nav-links{display:flex!important;list-style:none!important;gap:1.4rem!important;align-items:center!important;margin:0!important;padding:0!important;}
+        .site-nav-links>li{position:relative!important;}
+        .site-nav-links>li:not(:last-child)::after{content:''!important;position:absolute!important;right:-0.78rem!important;top:15%!important;height:70%!important;width:1px!important;background:linear-gradient(180deg,transparent,rgba(212,175,55,0.55) 30%,rgba(212,175,55,0.55) 70%,transparent)!important;pointer-events:none!important;}
+        .site-nav-links a{color:#fff!important;text-decoration:none!important;font-weight:500!important;font-size:0.93rem!important;padding:0.18rem 0!important;transition:color 0.3s!important;display:inline!important;background:transparent!important;border-bottom:none!important;}
+        .site-nav-links a:hover{color:#D4AF37!important;}
+        .site-dropdown-menu{display:none!important;position:absolute!important;top:100%!important;left:0!important;background:#fff!important;min-width:230px!important;box-shadow:0 6px 20px rgba(0,0,0,0.15)!important;border-radius:4px!important;padding:0.5rem 0!important;list-style:none!important;z-index:1000!important;}
+        .site-dropdown:hover .site-dropdown-menu{display:block!important;}
+        .site-dropdown-menu a{color:#1A1A1A!important;padding:0.7rem 1.25rem!important;display:block!important;font-size:0.9rem!important;font-weight:400!important;background:transparent!important;}
+        .site-dropdown-menu a:hover{background:#F8F6F1!important;color:#0A1F3D!important;}
+        .site-btn-nav{background:#D4AF37!important;color:#0A1F3D!important;padding:0.6rem 1.5rem!important;border-radius:4px!important;font-weight:600!important;transition:background 0.3s,transform 0.2s!important;}
+        .site-btn-nav:hover{background:#E8C96A!important;transform:translateY(-2px)!important;}
+        .site-mobile-toggle{display:none!important;background:none!important;border:none!important;color:#fff!important;font-size:1.6rem!important;cursor:pointer!important;line-height:1!important;padding:0!important;}
+        @media(max-width:968px){
+            .site-mobile-toggle{display:block!important;}
+            .site-nav-links{display:none!important;position:absolute!important;top:100%!important;left:0!important;right:0!important;background:#0A1F3D!important;flex-direction:column!important;padding:0.75rem 0!important;gap:0!important;z-index:999!important;}
+            .site-nav-links.active{display:flex!important;}
+            .site-nav-links>li{width:100%!important;}
+            .site-nav-links>li:not(:last-child)::after{display:none!important;}
+            .site-nav-links a{display:block!important;padding:0.85rem 1.5rem!important;border-bottom:1px solid rgba(255,255,255,0.07)!important;}
+            .site-dropdown-menu{position:static!important;display:none!important;box-shadow:none!important;background:rgba(0,0,0,0.22)!important;border-radius:0!important;margin-top:0!important;}
+            .site-dropdown.active .site-dropdown-menu{display:block!important;}
+            .site-dropdown-menu a{color:rgba(255,255,255,0.85)!important;padding-left:2.5rem!important;}
+            .site-dropdown-menu a:hover{background:rgba(255,255,255,0.05)!important;color:#D4AF37!important;}
+            .site-btn-nav{display:block!important;margin:0.5rem 1.5rem!important;text-align:center!important;padding:0.75rem 1rem!important;}
+        }
+
     </style>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700;900&family=Work+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
     <header class="site-header">
-        <div class="site-header-top">
-        <p>
-            No Fees Unless We Win &nbsp;|&nbsp; Si Hablo Espa&ntilde;ol
-        </p>
+    <div class="site-header-top">
+        <p>No Fees Unless We Win &nbsp;|&nbsp; Si Hablo Espa&ntilde;ol</p>
     </div>
     <nav>
         <div class="site-nav-container">
             <a href="index.html" class="site-logo-link" aria-label="Dean &amp; Camper P.A. &mdash; Home">
                 <img src="blue-logo.svg" alt="Dean &amp; Camper P.A. Injury Lawyers" style="display:block">
             </a>
-            <button class="site-mobile-toggle" aria-label="Toggle navigation menu">&#9776;</button>
+            <button class="site-mobile-toggle" id="siteMobileToggle" aria-label="Toggle navigation menu">&#9776;</button>
             <ul class="site-nav-links" id="siteMainNav">
                 <li><button id="headerCallBtn" class="header-call-btn">&#128222; Call Now</button></li>
                 <li><a href="index.html">Home</a></li>
@@ -610,11 +648,12 @@
                         <li><a href="car-accident-injuries.html">Car Accidents</a></li>
                         <li><a href="truck-accident-injuries.html">Truck Accidents</a></li>
                         <li><a href="motorcycle-accident-injuries.html">Motorcycle Accidents</a></li>
+                        <li><a href="boat-accident-injuries.html">Boat Accidents</a></li>
                         <li><a href="auto-insurance-claims.html">Auto Insurance Claims</a></li>
                         <li><a href="wrongful-death.html">Wrongful Death Claims</a></li>
                         <li><a href="premises-liability.html">Premises Liability</a></li>
-                        <li><a href="boat-accident-injuries.html">Boat Accidents</a></li>
                         <li><a href="defective-product-injuries.html">Defective Product Injuries</a></li>
+                        <li><a href="dog-bite-injuries.html">Dog Bite Injuries</a></li>
                         <li><a href="other-personal-injuries.html">Other Personal Injuries</a></li>
                     </ul>
                 </li>
@@ -625,7 +664,6 @@
                         <li><a href="chad-camper.html">Chad Camper</a></li>
                     </ul>
                 </li>
-                
                 <li><a href="contact.html">Contact</a></li>
                 <li><a href="contact.html" class="site-btn-nav">Free Consultation</a></li>
             </ul>
@@ -1073,39 +1111,33 @@
 })();
 </script>
 
+
+
 <!-- ===== NAV MOBILE JS ===== -->
 <script>
-(function () {
-    var toggle = document.querySelector('.site-mobile-toggle');
-    var nav    = document.getElementById('siteMainNav');
-
-    if (toggle && nav) {
-        toggle.addEventListener('click', function () {
-            nav.classList.toggle('active');
-        });
+(function(){
+    var toggle=document.getElementById('siteMobileToggle');
+    var nav=document.getElementById('siteMainNav');
+    if(toggle&&nav){
+        toggle.addEventListener('click',function(){nav.classList.toggle('active');});
     }
-
-    // Mobile dropdown accordion (prevent navigation, just expand)
-    document.querySelectorAll('.site-dropdown').forEach(function (dd) {
-        var link = dd.querySelector(':scope > a');
-        if (!link) return;
-        link.addEventListener('click', function (e) {
-            if (window.innerWidth <= 968) {
-                e.preventDefault();
-                dd.classList.toggle('active');
-            }
+    document.querySelectorAll('.site-dropdown').forEach(function(dd){
+        var link=dd.querySelector(':scope>a');
+        if(!link)return;
+        link.addEventListener('click',function(e){
+            if(window.innerWidth<=968){e.preventDefault();dd.classList.toggle('active');}
         });
     });
-
-    // Close menu when clicking outside
-    document.addEventListener('click', function (e) {
-        if (nav && nav.classList.contains('active') &&
-            !e.target.closest('.site-header')) {
+    document.addEventListener('click',function(e){
+        if(nav&&nav.classList.contains('active')&&!e.target.closest('.site-header')){
             nav.classList.remove('active');
         }
     });
+    var callBtn=document.getElementById('headerCallBtn');
+    if(callBtn){
+        callBtn.addEventListener('click',function(){window.location.href='tel:+18504333077';});
+    }
 })();
 </script>
-
 </body>
 </html>
