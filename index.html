@@ -1897,25 +1897,6 @@
 
 </script>
 
-<script>
-  // Phone number obfuscation: not visible in UI and not plainly visible in HTML
-  // NOTE: This still isn't "secret"—a determined user can discover it via devtools/network.
-  (function () {
-    const parts = ["850", "384", "4477"];   // number split
-    const tel = "tel:" + parts.join("");
-    function callNow(e) {
-      e.preventDefault();
-      window.location.href = tel;
-    }
-    const headerParts = ["850", "433", "3077"];
-    const headerTel = "tel:" + headerParts.join("");
-    function callNowHeader(e) { e.preventDefault(); window.location.href = headerTel; }
-    const headerBtn = document.getElementById("headerCallBtn");
-
-    const btn = document.getElementById("callNowBtn");
-    if (btn) btn.addEventListener("click", callNow);
-  })();
-</script>
 
 <script>
   /* Shuffle scrolling tracks on every page load */
