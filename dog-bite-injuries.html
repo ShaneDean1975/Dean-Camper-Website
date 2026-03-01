@@ -117,6 +117,7 @@
             display: flex;
             align-items: center;
             gap: 24px;
+            will-change: transform;
             animation: badgeScroll 40s linear infinite;
             width: fit-content;
         }
@@ -127,7 +128,7 @@
         }
         .badge-img-item {
             flex: 0 0 auto;
-            height: 110px;
+            height: 110px; min-width: 80px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -148,7 +149,7 @@
         .badge-img-item img:hover { opacity: 1; filter: grayscale(0%); }
         @media (max-width: 768px) {
             .badge-img-item { flex: 0 0 auto; height: 83px; }
-            .badges-track { gap: 16px; }
+            .badges-track { animation-duration: 28s; gap: 16px; }
             .badges-scroll-wrap::before,
             .badges-scroll-wrap::after { width: 40px; }
         }
@@ -351,33 +352,33 @@
 <section class="badges-section" aria-label="Awards and Recognition">
     <div class="badges-scroll-wrap">
         <div class="badges-track">
-            <div class="badge-img-item"><img src="Million_Dollar_Advocates_Forum.png" alt="Million Dollar Advocates Forum" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Multi_Million_Dollar_Advocates_Forum.png" alt="Multi-Million Dollar Advocates Forum" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Super_Lawyers.png" alt="Florida Super Lawyers Rising Stars" loading="lazy"></div>
-            <div class="badge-img-item"><img src="american_association_for_justice.png" alt="American Association for Justice" loading="lazy"></div>
-            <div class="badge-img-item"><img src="2015 Premier 100 Seal-AATA.png" alt="AATA Premier 100 Trial Attorneys" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Avvo 10.jpg" alt="AVVO 10.0 Superb Rating" loading="lazy"></div>
-            <div class="badge-img-item"><img src="10 Best Award PI 2015.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
-            <div class="badge-img-item"><img src="10 BEST PIA.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Avvo (5 star reviews - Shane Dean).png" alt="AVVO 5-Star Client Reviews" loading="lazy"></div>
-            <div class="badge-img-item"><a href="http://www.avvo.com/attorneys/32548-fl-chad-camper-4505471.html?utm_campaign=avvo_review_badge&utm_content=4505471&utm_medium=avvo_badge&utm_source=avvo" target="_blank" rel="noopener noreferrer"><img src="Avvo (5 star reviews - Chad Camper).png" alt="AVVO 5-Star Client Reviews - Chad Camper" loading="lazy"></a></div>
-            <div class="badge-img-item"><a href="http://www.bestattorneysofamerica.com/" target="_blank" rel="noopener noreferrer"><img src="best_attorneys_of_america.png" alt="Best Attorneys of America" loading="lazy"></a></div>
-            <div class="badge-img-item"><a href="https://www.expertise.com/fl/pensacola/car-accident-lawyers" target="_blank" rel="noopener noreferrer"><img src="expertise_com_pensacola_2026.png" alt="Best Car Accident Lawyers Pensacola 2026 - Expertise.com" loading="lazy"></a></div>
-            <div class="badge-img-item"><a href="http://www.superlawyers.com/florida/lawyer/Chad-Camper/ab461b53-9d65-46ed-933e-e82c63dc1e39.html" target="_blank" rel="noopener noreferrer"><img src="Super Lawyers (Chad Camper).png" alt="Super Lawyers - Chad Camper" loading="lazy"></a></div>
+            <div class="badge-img-item"><img src="Million_Dollar_Advocates_Forum.png" alt="Million Dollar Advocates Forum"></div>
+            <div class="badge-img-item"><img src="Multi_Million_Dollar_Advocates_Forum.png" alt="Multi-Million Dollar Advocates Forum"></div>
+            <div class="badge-img-item"><img src="Super_Lawyers.png" alt="Florida Super Lawyers Rising Stars"></div>
+            <div class="badge-img-item"><img src="american_association_for_justice.png" alt="American Association for Justice"></div>
+            <div class="badge-img-item"><img src="2015 Premier 100 Seal-AATA.png" alt="AATA Premier 100 Trial Attorneys"></div>
+            <div class="badge-img-item"><img src="Avvo 10.jpg" alt="AVVO 10.0 Superb Rating"></div>
+            <div class="badge-img-item"><img src="10 Best Award PI 2015.jpg" alt="10 Best Personal Injury Attorneys"></div>
+            <div class="badge-img-item"><img src="10 BEST PIA.jpg" alt="10 Best Personal Injury Attorneys"></div>
+            <div class="badge-img-item"><img src="Avvo (5 star reviews - Shane Dean).png" alt="AVVO 5-Star Client Reviews"></div>
+            <div class="badge-img-item"><a href="http://www.avvo.com/attorneys/32548-fl-chad-camper-4505471.html?utm_campaign=avvo_review_badge&utm_content=4505471&utm_medium=avvo_badge&utm_source=avvo" target="_blank" rel="noopener noreferrer"><img src="Avvo (5 star reviews - Chad Camper).png" alt="AVVO 5-Star Client Reviews - Chad Camper"></a></div>
+            <div class="badge-img-item"><a href="http://www.bestattorneysofamerica.com/" target="_blank" rel="noopener noreferrer"><img src="best_attorneys_of_america.png" alt="Best Attorneys of America"></a></div>
+            <div class="badge-img-item"><a href="https://www.expertise.com/fl/pensacola/car-accident-lawyers" target="_blank" rel="noopener noreferrer"><img src="expertise_com_pensacola_2026.png" alt="Best Car Accident Lawyers Pensacola 2026 - Expertise.com"></a></div>
+            <div class="badge-img-item"><a href="http://www.superlawyers.com/florida/lawyer/Chad-Camper/ab461b53-9d65-46ed-933e-e82c63dc1e39.html" target="_blank" rel="noopener noreferrer"><img src="Super Lawyers (Chad Camper).png" alt="Super Lawyers - Chad Camper"></a></div>
             <!-- duplicate for seamless loop -->
-            <div class="badge-img-item"><img src="Million_Dollar_Advocates_Forum.png" alt="Million Dollar Advocates Forum" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Multi_Million_Dollar_Advocates_Forum.png" alt="Multi-Million Dollar Advocates Forum" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Super_Lawyers.png" alt="Florida Super Lawyers Rising Stars" loading="lazy"></div>
-            <div class="badge-img-item"><img src="american_association_for_justice.png" alt="American Association for Justice" loading="lazy"></div>
-            <div class="badge-img-item"><img src="2015 Premier 100 Seal-AATA.png" alt="AATA Premier 100 Trial Attorneys" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Avvo 10.jpg" alt="AVVO 10.0 Superb Rating" loading="lazy"></div>
-            <div class="badge-img-item"><img src="10 Best Award PI 2015.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
-            <div class="badge-img-item"><img src="10 BEST PIA.jpg" alt="10 Best Personal Injury Attorneys" loading="lazy"></div>
-            <div class="badge-img-item"><img src="Avvo (5 star reviews - Shane Dean).png" alt="AVVO 5-Star Client Reviews" loading="lazy"></div>
-            <div class="badge-img-item"><a href="http://www.avvo.com/attorneys/32548-fl-chad-camper-4505471.html?utm_campaign=avvo_review_badge&utm_content=4505471&utm_medium=avvo_badge&utm_source=avvo" target="_blank" rel="noopener noreferrer"><img src="Avvo (5 star reviews - Chad Camper).png" alt="AVVO 5-Star Client Reviews - Chad Camper" loading="lazy"></a></div>
-            <div class="badge-img-item"><a href="http://www.bestattorneysofamerica.com/" target="_blank" rel="noopener noreferrer"><img src="best_attorneys_of_america.png" alt="Best Attorneys of America" loading="lazy"></a></div>
-            <div class="badge-img-item"><a href="https://www.expertise.com/fl/pensacola/car-accident-lawyers" target="_blank" rel="noopener noreferrer"><img src="expertise_com_pensacola_2026.png" alt="Best Car Accident Lawyers Pensacola 2026 - Expertise.com" loading="lazy"></a></div>
-            <div class="badge-img-item"><a href="http://www.superlawyers.com/florida/lawyer/Chad-Camper/ab461b53-9d65-46ed-933e-e82c63dc1e39.html" target="_blank" rel="noopener noreferrer"><img src="Super Lawyers (Chad Camper).png" alt="Super Lawyers - Chad Camper" loading="lazy"></a></div>
+            <div class="badge-img-item"><img src="Million_Dollar_Advocates_Forum.png" alt="Million Dollar Advocates Forum"></div>
+            <div class="badge-img-item"><img src="Multi_Million_Dollar_Advocates_Forum.png" alt="Multi-Million Dollar Advocates Forum"></div>
+            <div class="badge-img-item"><img src="Super_Lawyers.png" alt="Florida Super Lawyers Rising Stars"></div>
+            <div class="badge-img-item"><img src="american_association_for_justice.png" alt="American Association for Justice"></div>
+            <div class="badge-img-item"><img src="2015 Premier 100 Seal-AATA.png" alt="AATA Premier 100 Trial Attorneys"></div>
+            <div class="badge-img-item"><img src="Avvo 10.jpg" alt="AVVO 10.0 Superb Rating"></div>
+            <div class="badge-img-item"><img src="10 Best Award PI 2015.jpg" alt="10 Best Personal Injury Attorneys"></div>
+            <div class="badge-img-item"><img src="10 BEST PIA.jpg" alt="10 Best Personal Injury Attorneys"></div>
+            <div class="badge-img-item"><img src="Avvo (5 star reviews - Shane Dean).png" alt="AVVO 5-Star Client Reviews"></div>
+            <div class="badge-img-item"><a href="http://www.avvo.com/attorneys/32548-fl-chad-camper-4505471.html?utm_campaign=avvo_review_badge&utm_content=4505471&utm_medium=avvo_badge&utm_source=avvo" target="_blank" rel="noopener noreferrer"><img src="Avvo (5 star reviews - Chad Camper).png" alt="AVVO 5-Star Client Reviews - Chad Camper"></a></div>
+            <div class="badge-img-item"><a href="http://www.bestattorneysofamerica.com/" target="_blank" rel="noopener noreferrer"><img src="best_attorneys_of_america.png" alt="Best Attorneys of America"></a></div>
+            <div class="badge-img-item"><a href="https://www.expertise.com/fl/pensacola/car-accident-lawyers" target="_blank" rel="noopener noreferrer"><img src="expertise_com_pensacola_2026.png" alt="Best Car Accident Lawyers Pensacola 2026 - Expertise.com"></a></div>
+            <div class="badge-img-item"><a href="http://www.superlawyers.com/florida/lawyer/Chad-Camper/ab461b53-9d65-46ed-933e-e82c63dc1e39.html" target="_blank" rel="noopener noreferrer"><img src="Super Lawyers (Chad Camper).png" alt="Super Lawyers - Chad Camper"></a></div>
         </div>
     </div>
 </section>
