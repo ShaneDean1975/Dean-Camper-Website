@@ -1018,7 +1018,7 @@
           margin: 0 auto;
         }
         .hero-title {
-          font-family: 'Playfair Display', Georgia, serif;
+          font-family: 'Work Sans', sans-serif;
           font-size: clamp(24px, 2.6vw, 38px);
           font-weight: 700;
           line-height: 1.2;
@@ -1890,20 +1890,6 @@
 
     document.querySelectorAll('.fade-in').forEach(function(el) {
         observer.observe(el);
-    });        }
-
-        // Mobile dropdown accordion
-        if (window.innerWidth <= 968) {
-            dropdowns.forEach(function(dropdown) {
-                var link = dropdown.querySelector('a');
-                if (link) {
-                    link.addEventListener('click', function(e) {
-                        e.preventDefault();
-                        dropdown.classList.toggle('active');
-                    });
-                }
-            });
-        }
     });
 
 
