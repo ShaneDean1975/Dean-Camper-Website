@@ -335,6 +335,7 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
             .site-dropdown-menu a{color:rgba(255,255,255,0.85)!important;padding-left:2.5rem!important;}
             .site-dropdown-menu a:hover{background:rgba(255,255,255,0.05)!important;color:#D4AF37!important;}
             .site-btn-nav{display:block!important;margin:0.5rem 1.5rem!important;text-align:center!important;padding:0.75rem 1rem!important;}
+            .site-dropdown:hover .site-dropdown-menu{display:none!important;}
         }
 
     </style>
@@ -752,30 +753,7 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
 </footer>
 
 <script>
-    // Mobile nav toggle
-    const toggle = document.querySelector('.site-mobile-toggle');
-    const nav = document.querySelector('.site-nav-links');
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => nav.classList.toggle('active'));
-    }
-    document.querySelectorAll('.site-dropdown > a').forEach(link => {
-        link.addEventListener('click', e => {
-            if (window.innerWidth <= 968) {
-                e.preventDefault();
-                link.closest('.site-dropdown').classList.toggle('active');
-            }
-        });
-    });
-
-    // Header Call Now button
-    (function () {
-        var parts = ["850", "433", "3077"];
-        var tel = "tel:" + parts.join("");
-        var btn = document.getElementById("headerCallBtn");
-        if (btn) btn.addEventListener("click", function (e) { e.preventDefault(); window.location.href = tel; });
-    })();
-
-    // Contact form validation
+        // Contact form validation
     document.getElementById('contact-form').addEventListener('submit', function(e) {
         e.preventDefault();
         const required = this.querySelectorAll('[required]');

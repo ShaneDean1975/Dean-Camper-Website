@@ -293,6 +293,7 @@
             .site-dropdown-menu a{color:rgba(255,255,255,0.85)!important;padding-left:2.5rem!important;}
             .site-dropdown-menu a:hover{background:rgba(255,255,255,0.05)!important;color:#D4AF37!important;}
             .site-btn-nav{display:block!important;margin:0.5rem 1.5rem!important;text-align:center!important;padding:0.75rem 1rem!important;}
+            .site-dropdown:hover .site-dropdown-menu{display:none!important;}
         }
 
     </style>
@@ -660,24 +661,6 @@
         <p style="margin-top:6px; font-size:0.8rem; opacity:0.6;">The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice. No attorney-client relationship is formed by viewing this website.</p>
     </div>
 </footer>
-
-<script>
-    // Mobile nav toggle
-    const toggle = document.querySelector('.site-mobile-toggle');
-    const nav = document.querySelector('.site-nav-links');
-    if (toggle && nav) {
-        toggle.addEventListener('click', () => nav.classList.toggle('active'));
-    }
-    // Mobile dropdown toggles
-    document.querySelectorAll('.site-dropdown > a').forEach(link => {
-        link.addEventListener('click', e => {
-            if (window.innerWidth <= 968) {
-                e.preventDefault();
-                link.closest('.site-dropdown').classList.toggle('active');
-            }
-        });
-    });
-</script>
 
 <!-- ===== CASE EVALUATION MODAL ===== -->
 <div class="eval-modal-overlay" id="evalModalOverlay" role="dialog" aria-modal="true" aria-labelledby="evalModalTitle">
