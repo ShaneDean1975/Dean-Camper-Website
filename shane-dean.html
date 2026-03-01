@@ -477,7 +477,7 @@
             <a href="tel:+18504333077" class="site-mobile-phone" aria-label="Call (850) 433-3077">&#9742;&#65038;</a>
             <button class="site-mobile-toggle" id="siteMobileToggle" aria-label="Toggle navigation menu">&#9776;</button>
             <ul class="site-nav-links" id="siteMainNav">
-                <li><button id="headerCallBtn" class="header-call-btn">&#128222; Call Now</button></li>
+                <li><a href="tel:+18504333077" id="headerCallBtn" class="header-call-btn">&#128222; Call Now</a></li>
                 <li><a href="index.html">Home</a></li>
                 <li class="site-dropdown">
                     <a href="index.html#practice-areas">Practice Areas &#9662;</a>
@@ -702,7 +702,6 @@
     function callNow(e) { e.preventDefault(); window.location.href = tel; }
     var headerBtn = document.getElementById("headerCallBtn");
     var stickyBtn = document.getElementById("stickyCallBtn");
-    if (headerBtn) headerBtn.addEventListener("click", callNow);
     if (stickyBtn) stickyBtn.addEventListener("click", callNow);
   })();
 </script>
@@ -729,10 +728,6 @@
             nav.classList.remove('active');
         }
     });
-    var callBtn=document.getElementById('headerCallBtn');
-    if(callBtn){
-        callBtn.addEventListener('click',function(){window.location.href='tel:+18504333077';});
-    }
 })();
 </script>
 </body>

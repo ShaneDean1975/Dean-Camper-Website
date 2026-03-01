@@ -429,7 +429,7 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
             <a href="tel:+18504333077" class="site-mobile-phone" aria-label="Call (850) 433-3077">&#9742;&#65038;</a>
             <button class="site-mobile-toggle" id="siteMobileToggle" aria-label="Toggle navigation menu">&#9776;</button>
             <ul class="site-nav-links" id="siteMainNav">
-                <li><button id="headerCallBtn" class="header-call-btn">&#128222; Call Now</button></li>
+                <li><a href="tel:+18504333077" id="headerCallBtn" class="header-call-btn">&#128222; Call Now</a></li>
                 <li><a href="index.html">Home</a></li>
                 <li class="site-dropdown">
                     <a href="index.html#practice-areas">Practice Areas &#9662;</a>
@@ -871,10 +871,6 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
             nav.classList.remove('active');
         }
     });
-    var callBtn=document.getElementById('headerCallBtn');
-    if(callBtn){
-        callBtn.addEventListener('click',function(){window.location.href='tel:+18504333077';});
-    }
 })();
 </script>
 
