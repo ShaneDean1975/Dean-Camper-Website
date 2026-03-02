@@ -44,7 +44,8 @@
       "WebFetch(domain:www.expertise.com)",
       "WebFetch(domain:profiles.superlawyers.com)",
       "Bash(for f in auto-insurance-claims.html boat-accident-injuries.html car-accident-injuries.html defective-product-injuries.html dog-bite-injuries.html motorcycle-accident-injuries.html other-personal-injuries.html premises-liability.html wrongful-death.html truck-accident-injuries.html)",
-      "Bash(do echo \"=== $f ===\")"
+      "Bash(do echo \"=== $f ===\")",
+      "Bash(/tmp/_fix_tel_final.py:*)"
     ]
   }
 }
