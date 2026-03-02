@@ -45,7 +45,14 @@
       "WebFetch(domain:profiles.superlawyers.com)",
       "Bash(for f in auto-insurance-claims.html boat-accident-injuries.html car-accident-injuries.html defective-product-injuries.html dog-bite-injuries.html motorcycle-accident-injuries.html other-personal-injuries.html premises-liability.html wrongful-death.html truck-accident-injuries.html)",
       "Bash(do echo \"=== $f ===\")",
-      "Bash(/tmp/_fix_tel_final.py:*)"
+      "Bash(/tmp/_fix_tel_final.py:*)",
+      "WebFetch(domain:thenationaltriallawyers.org)",
+      "WebFetch(domain:www.americastop100attorneys.com)",
+      "Bash(curl -L -o _ntl_badge_check.png \"https://thenationaltriallawyers.org/wp-content/uploads/6c4377eb-a009-43e3-b07a-7a2b5595a9c4_medium.png\")",
+      "Bash(curl -L -o _at100_logo1_check.png \"https://www.americastop100attorneys.com/wp-content/uploads/2016/07/logo-1.png\")",
+      "Bash(curl -L -o _at100_logo_check.png \"https://www.americastop100attorneys.com/wp-content/uploads/2016/07/logo.png\")",
+      "Bash(curl -L -o \"ntl_top100_badge.png\" \"https://thenationaltriallawyers.org/wp-content/uploads/6c4377eb-a009-43e3-b07a-7a2b5595a9c4_medium.png\")",
+      "Bash(curl -L -o \"americas_top100_attorneys.png\" \"https://www.americastop100attorneys.com/wp-content/uploads/2016/07/logo-1.png\")"
     ]
   }
 }
