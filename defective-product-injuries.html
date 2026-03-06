@@ -951,13 +951,12 @@
                 inp.type = 'hidden'; inp.name = n; inp.value = v || '';
                 wf.appendChild(inp);
             }
-            addField('Field1', document.getElementById('eval-fname').value);
-            addField('Field2', document.getElementById('eval-lname').value);
-            addField('Field3', document.getElementById('eval-phone').value);
-            addField('Field4', document.getElementById('eval-email').value);
-            addField('Field5', document.getElementById('eval-case-type').value);
-            addField('Field6', document.getElementById('eval-office').value);
-            addField('Field7', document.getElementById('eval-message').value);
+            addField('Field1', (document.getElementById('eval-fname').value + ' ' + document.getElementById('eval-lname').value).trim());
+            addField('Field2', document.getElementById('eval-phone').value);
+            addField('Field3', document.getElementById('eval-email').value);
+            addField('Field4', document.getElementById('eval-case-type').value);
+            addField('Field5', document.getElementById('eval-office').value);
+            addField('Field6', document.getElementById('eval-message').value);
             document.body.appendChild(wf);
             wf.submit();
             document.body.removeChild(wf);
