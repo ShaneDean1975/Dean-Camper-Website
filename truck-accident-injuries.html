@@ -915,18 +915,18 @@
             if (!ok) return;
 
             // Post to Wufoo via hidden iframe so user stays on page
-            var body = new URLSearchParams();
-            body.append('Field1', document.getElementById('eval-fname').value);
-            body.append('Field2', document.getElementById('eval-lname').value);
-            body.append('Field3', document.getElementById('eval-phone').value);
-            body.append('Field4', document.getElementById('eval-email').value);
-            body.append('Field6', document.getElementById('eval-case-type').value);
-            body.append('Field8', document.getElementById('eval-office').value);
-            body.append('Field10', document.getElementById('eval-message').value);
-            fetch('https://deancamper.wufoo.com/api/v3/forms/r15j7yku0dbtffn/entries.json', {
+            fetch('/api/submit-form', {
                 method: 'POST',
-                headers: { 'Authorization': 'Basic ' + btoa('G80S-OD80-43CZ-51EB:footastic') },
-                body: body
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    Field1:  document.getElementById('eval-fname').value,
+                    Field2:  document.getElementById('eval-lname').value,
+                    Field3:  document.getElementById('eval-phone').value,
+                    Field4:  document.getElementById('eval-email').value,
+                    Field6:  document.getElementById('eval-case-type').value,
+                    Field8:  document.getElementById('eval-office').value,
+                    Field10: document.getElementById('eval-message').value
+                })
             });
 
             form.style.display = 'none';
