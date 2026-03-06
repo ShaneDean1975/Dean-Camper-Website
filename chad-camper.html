@@ -317,15 +317,77 @@
         }
 
         /* Footer */
-        footer {
-            background: var(--primary-navy);
-            color: var(--white);
-            padding: 60px 40px 40px;
-            text-align: center;
+        /* ── Footer ─────────────────────────────────────────── */
+        footer { background: #050F1C; color: rgba(255,255,255,0.7); padding: 36px 40px 20px; }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; margin-bottom: 14px; }
+        .footer-section h4 { color: #D4AF37; font-family: 'Playfair Display', serif; font-size: 1.1rem; margin-bottom: 11px; }
+        .footer-section ul { list-style: none; padding: 0; }
+        .footer-section ul li { margin-bottom: 6px; }
+        .footer-section a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.95rem; transition: color 0.3s; }
+        .footer-section a:hover { color: #D4AF37; }
+        .footer-section p { font-size: 0.9rem; line-height: 1.6; margin-bottom: 6px; }
+        .footer-bottom { text-align: center; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.85rem; }
+        .footer-bottom p { margin-bottom: 4px; }
+        /* ── Case Eval Modal ─────────────────────────────────── */
+        .eval-modal-overlay {
+            display: none; position: fixed; inset: 0;
+            background: rgba(10,20,50,0.72); z-index: 9000;
+            align-items: center; justify-content: center; padding: 1rem;
         }
-
-        footer p {
-            opacity: 0.8;
+        .eval-modal-overlay.open { display: flex; }
+        .eval-modal {
+            background: #fff; border-radius: 10px; max-width: 680px;
+            width: 100%; max-height: 90vh; overflow-y: auto;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.38); position: relative;
+        }
+        .eval-modal-header {
+            background: linear-gradient(135deg, #1a2a6c 0%, #213770 100%);
+            color: #fff; padding: 1.4rem 2rem 1.2rem;
+            border-radius: 10px 10px 0 0; position: relative;
+        }
+        .eval-modal-header h3 {
+            font-family: 'Playfair Display', serif; font-size: 1.45rem;
+            margin: 0 2.5rem 0.3rem 0; color: #fff;
+        }
+        .eval-modal-header p { margin: 0; font-size: 0.88rem; color: rgba(255,255,255,0.82); }
+        .eval-modal-close {
+            position: absolute; top: 0.9rem; right: 1.1rem;
+            background: none; border: none; color: rgba(255,255,255,0.75);
+            font-size: 1.8rem; cursor: pointer; line-height: 1;
+            padding: 0.1rem 0.4rem; transition: color 0.2s;
+        }
+        .eval-modal-close:hover { color: #fff; }
+        .eval-modal-body { padding: 1.8rem 2rem; }
+        .eval-form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.1rem; margin-bottom: 1.2rem; }
+        .eval-form-group { display: flex; flex-direction: column; gap: 0.35rem; }
+        .eval-form-group.full { grid-column: 1 / -1; }
+        .eval-form-group label { font-family: 'Work Sans', sans-serif; font-weight: 600; font-size: 0.88rem; color: #0f1419; }
+        .eval-required { color: #dc3545; margin-left: 0.15rem; }
+        .eval-form-group input, .eval-form-group select, .eval-form-group textarea {
+            padding: 0.65rem 0.9rem; border: 1.5px solid #d0dae6;
+            border-radius: 5px; font-size: 0.95rem;
+            font-family: 'Work Sans', sans-serif; color: #0f1419;
+            background: #fff; transition: border-color 0.2s;
+        }
+        .eval-form-group input:focus, .eval-form-group select:focus,
+        .eval-form-group textarea:focus { outline: none; border-color: #213770; }
+        .eval-form-group textarea { resize: vertical; min-height: 88px; }
+        .eval-submit-btn {
+            width: 100%; background: #c8102e; color: #fff;
+            border: none; border-radius: 6px; padding: 1rem 2rem;
+            font-size: 1.05rem; font-weight: 700; font-family: 'Work Sans', sans-serif;
+            cursor: pointer; letter-spacing: 0.02em; transition: background 0.2s;
+        }
+        .eval-submit-btn:hover { background: #a50d26; }
+        .eval-form-note { text-align: center; color: #5a6978; font-size: 0.84rem; margin-top: 0.9rem; }
+        .eval-success { display: none; text-align: center; padding: 2rem 1rem; }
+        .eval-success h4 { font-family: 'Playfair Display', serif; font-size: 1.6rem; color: #16a34a; margin-bottom: 0.8rem; }
+        .eval-success p { color: #5a6978; font-size: 1rem; }
+        @media (max-width: 600px) {
+            .eval-form-grid { grid-template-columns: 1fr; }
+            .eval-modal-body { padding: 1.2rem; }
+            .eval-modal-header { padding: 1.1rem 1.2rem; }
+            .eval-modal-header h3 { font-size: 1.15rem; }
         }
 
         /* Responsive */
@@ -710,9 +772,170 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Dean & Camper, P.A. All Rights Reserved.</p>
-        <p style="margin-top: 10px;"><a href="index.html" style="color: var(--gold); text-decoration: none;">Return to Home</a></p>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>Practice Areas</h4>
+                <ul>
+                    <li><a href="car-accident-injuries.html">Car Accident Injuries</a></li>
+                    <li><a href="truck-accident-injuries.html">Truck Accident Injuries</a></li>
+                    <li><a href="motorcycle-accident-injuries.html">Motorcycle Accident Injuries</a></li>
+                    <li><a href="auto-insurance-claims.html">Auto Insurance Claims</a></li>
+                    <li><a href="wrongful-death.html">Wrongful Death Claims</a></li>
+                    <li><a href="premises-liability.html">Premises Liability Injuries</a></li>
+                    <li><a href="defective-product-injuries.html">Defective Product Injuries</a></li>
+                    <li><a href="boat-accident-injuries.html">Boat &amp; Jet Ski Injuries</a></li>
+                    <li><a href="other-personal-injuries.html">Other Personal Injuries</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Our Firm</h4>
+                <ul>
+                    <li><a href="shane-dean.html">Shane Dean</a></li>
+                    <li><a href="chad-camper.html">Chad Camper</a></li>
+                    
+                    <li><a href="contact.html">Office Locations</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Locations</h4>
+                <ul>
+                    <li><a href="pensacola_car_accident_lawyer_page.html">Pensacola, FL</a></li>
+                    <li><a href="fort_walton_beach_car_accident_lawyer_page.html">Fort Walton Beach, FL</a></li>
+                    <li><a href="destin_car_accident_lawyer_page.html">Destin, FL</a></li>
+                    <li><a href="crestview_car_accident_lawyer_page.html">Crestview, FL</a></li>
+                    <li><a href="mobile_al_car_accident_lawyer_page.html">Mobile, AL</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Contact Info</h4>
+                <p><a href="tel:+18504333077">Pensacola: (850) 433-3077</a></p>
+                <p><a href="tel:+18507963077">Ft. Walton Beach: (850) 796-3077</a></p>
+                <p><a href="tel:+18502697105">Destin: (850) 269-7105</a></p>
+                <p><a href="tel:+18507963077">Crestview: (850) 796-3077</a></p>
+                <p><a href="tel:+12512830577">Mobile: (251) 283-0577</a></p>
+                <p style="margin-top:14px; color:#D4AF37;">Available 24/7</p>
+                <p>Si Hablo Espa&ntilde;ol</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Dean &amp; Camper P.A. Injury Lawyers. All rights reserved.</p>
+            <p style="margin-top:6px; font-size:0.8rem; opacity:0.6;">The information on this website is for general information purposes only. Nothing on this site should be taken as legal advice. No attorney-client relationship is formed by viewing this website.</p>
+        </div>
     </footer>
+
+<!-- ===== CASE EVALUATION MODAL ===== -->
+<div class="eval-modal-overlay" id="evalModalOverlay" role="dialog" aria-modal="true" aria-labelledby="evalModalTitle">
+    <div class="eval-modal">
+        <div class="eval-modal-header">
+            <h3 id="evalModalTitle">Request Free Claim Evaluation Online Now</h3>
+            <p>No fees unless we win &mdash; confidential &amp; protected by attorney-client privilege</p>
+            <button class="eval-modal-close" id="closeEvalModal" aria-label="Close">&times;</button>
+        </div>
+        <div class="eval-modal-body">
+            <div class="eval-success" id="evalSuccess">
+                <h4>&#10003; Request Received!</h4>
+                <p>Thank you. A member of our team will contact you shortly to discuss your case.</p>
+            </div>
+            <form id="evalForm" action="/submit-contact" method="POST" novalidate>
+                <div class="eval-form-grid">
+                    <div class="eval-form-group">
+                        <label for="eval-fname">First Name<span class="eval-required">*</span></label>
+                        <input type="text" id="eval-fname" name="first-name" required autocomplete="given-name">
+                    </div>
+                    <div class="eval-form-group">
+                        <label for="eval-lname">Last Name<span class="eval-required">*</span></label>
+                        <input type="text" id="eval-lname" name="last-name" required autocomplete="family-name">
+                    </div>
+                    <div class="eval-form-group">
+                        <label for="eval-phone">Phone Number<span class="eval-required">*</span></label>
+                        <input type="tel" id="eval-phone" name="phone" required autocomplete="tel" placeholder="(850) 000-0000">
+                    </div>
+                    <div class="eval-form-group">
+                        <label for="eval-email">Email Address<span class="eval-required">*</span></label>
+                        <input type="email" id="eval-email" name="email" required autocomplete="email" placeholder="you@example.com">
+                    </div>
+                    <div class="eval-form-group full">
+                        <label for="eval-case-type">Type of Case<span class="eval-required">*</span></label>
+                        <select id="eval-case-type" name="case-type" required>
+                            <option value="">Please select...</option>
+                            <option value="car-accident">Car Accident</option>
+                            <option value="truck-accident">Truck Accident</option>
+                            <option value="motorcycle-accident">Motorcycle Accident</option>
+                            <option value="boat-accident">Boat Accident</option>
+                            <option value="slip-fall">Slip and Fall</option>
+                            <option value="wrongful-death">Wrongful Death</option>
+                            <option value="dog-bite">Dog Bite</option>
+                            <option value="defective-product">Defective Product</option>
+                            <option value="insurance-claim">Auto Insurance Claim</option>
+                            <option value="other">Other Personal Injury</option>
+                        </select>
+                    </div>
+                    <div class="eval-form-group full">
+                        <label for="eval-office">Nearest Office</label>
+                        <select id="eval-office" name="office">
+                            <option value="">Select a location...</option>
+                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
+                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
+                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
+                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
+                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
+                        </select>
+                    </div>
+                    <div class="eval-form-group full">
+                        <label for="eval-message">Brief Description of Your Case<span class="eval-required">*</span></label>
+                        <textarea id="eval-message" name="message" required placeholder="Please describe what happened, where, and any injuries sustained..."></textarea>
+                    </div>
+                </div>
+                <button type="submit" class="eval-submit-btn">Send My Free Claim Evaluation Request</button>
+                <p class="eval-form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
+            </form>
+        </div>
+    </div>
+</div>
+
+<script>
+(function () {
+    var overlay = document.getElementById('evalModalOverlay');
+    var closeBtn = document.getElementById('closeEvalModal');
+    var form = document.getElementById('evalForm');
+    var success = document.getElementById('evalSuccess');
+
+    function openModal() {
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+    }
+    function closeModal() {
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.openEvalModal').forEach(function(btn) {
+        btn.addEventListener('click', openModal);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', function (e) {
+        if (e.target === overlay) closeModal();
+    });
+    document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeModal();
+    });
+
+    if (form) {
+        form.addEventListener('submit', function (e) {
+            e.preventDefault();
+            var ok = true;
+            form.querySelectorAll('[required]').forEach(function (el) {
+                if (!el.value.trim()) {
+                    el.style.borderColor = '#dc3545'; ok = false;
+                } else { el.style.borderColor = ''; }
+            });
+            if (!ok) return;
+            form.style.display = 'none';
+            success.style.display = 'block';
+        });
+    }
+})();
+</script>
 
 
 
