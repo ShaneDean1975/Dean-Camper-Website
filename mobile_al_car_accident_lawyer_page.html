@@ -556,6 +556,62 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
     });
 </script>
 
+<script>
+(function () {
+    var overlay = document.getElementById('evalModalOverlay');
+    var closeBtn = document.getElementById('closeEvalModal');
+    var form = document.getElementById('evalForm');
+    var success = document.getElementById('evalSuccess');
+
+    function openModal() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
+
+    document.querySelectorAll('.openEvalModal, #openEvalModal').forEach(function(btn) {
+        btn.addEventListener('click', openModal);
+    });
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (overlay) overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
+    document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
+
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            var ok = true;
+            form.querySelectorAll('[required]').forEach(function(el) {
+                if (!el.value.trim()) { el.style.borderColor = '#dc3545'; ok = false; }
+                else { el.style.borderColor = ''; }
+            });
+            if (!ok) return;
+
+            // Post to Wufoo via hidden iframe so user stays on page
+            var wf = document.createElement('form');
+            wf.action = 'https://deancamper.wufoo.com/forms/r15j7yku0dbtffn/';
+            wf.method = 'POST';
+            wf.target = 'wufoo-eval-frame';
+            wf.style.display = 'none';
+            function addField(n, v) {
+                var inp = document.createElement('input');
+                inp.type = 'hidden'; inp.name = n; inp.value = v || '';
+                wf.appendChild(inp);
+            }
+            addField('Field1', document.getElementById('eval-fname').value);
+            addField('Field2', document.getElementById('eval-lname').value);
+            addField('Field3', document.getElementById('eval-phone').value);
+            addField('Field4', document.getElementById('eval-email').value);
+            addField('Field5', document.getElementById('eval-case-type').value);
+            addField('Field6', document.getElementById('eval-office').value);
+            addField('Field7', document.getElementById('eval-message').value);
+            document.body.appendChild(wf);
+            wf.submit();
+            document.body.removeChild(wf);
+
+            form.style.display = 'none';
+            success.style.display = 'block';
+        });
+    }
+})();
+</script>
+
 <!-- ===== NAV MOBILE JS ===== -->
 <script>
 (function(){
