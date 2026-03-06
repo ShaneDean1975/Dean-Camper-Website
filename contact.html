@@ -641,61 +641,8 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
             <div class="section-divider"></div>
         </div>
         <div class="form-card">
-            <form id="contact-form" action="/submit-contact" method="POST" novalidate>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="first-name">First Name<span class="required-star" aria-label="required">*</span></label>
-                        <input type="text" id="first-name" name="first-name" required aria-required="true" autocomplete="given-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name<span class="required-star" aria-label="required">*</span></label>
-                        <input type="text" id="last-name" name="last-name" required aria-required="true" autocomplete="family-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number<span class="required-star" aria-label="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" placeholder="(850) 000-0000">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address<span class="required-star" aria-label="required">*</span></label>
-                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="you@example.com">
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="office">Nearest Office</label>
-                        <select id="office" name="office">
-                            <option value="">Select a location...</option>
-                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
-                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
-                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
-                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
-                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="case-type">Type of Case<span class="required-star" aria-label="required">*</span></label>
-                        <select id="case-type" name="case-type" required aria-required="true">
-                            <option value="">Please select...</option>
-                            <option value="car-accident">Car Accident</option>
-                            <option value="truck-accident">Truck Accident</option>
-                            <option value="motorcycle-accident">Motorcycle Accident</option>
-                            <option value="boat-accident">Boat Accident</option>
-                            <option value="slip-fall">Slip and Fall</option>
-                            <option value="wrongful-death">Wrongful Death</option>
-                            <option value="dog-bite">Dog Bite</option>
-                            <option value="defective-product">Defective Product</option>
-                            <option value="insurance-claim">Auto Insurance Claim</option>
-                            <option value="other">Other Personal Injury</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="message">Brief Description of Your Case<span class="required-star" aria-label="required">*</span></label>
-                        <textarea id="message" name="message" required aria-required="true" placeholder="Please describe what happened and where, and any injuries you sustained..."></textarea>
-                    </div>
-                </div>
-                <div class="submit-row">
-                    <button type="submit" class="btn-submit">Send My Free Consultation Request</button>
-                </div>
-                <p class="form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
-            </form>
+            <div id="wufoo-r15j7yku0dbtffn">Fill out my <a href="https://deancamper.wufoo.com/forms/r15j7yku0dbtffn">online form</a>.</div>
+            <script type="text/javascript">var r15j7yku0dbtffn;(function(d,t){var s=d.createElement(t),options={'userName':'deancamper','formHash':'r15j7yku0dbtffn','autoResize':true,'height':'732','async':true,'host':'wufoo.com','header':'show','ssl':true};s.src=('https:'==d.location.protocol?'https://':'http://')+'secure.wufoo.com/scripts/embed/form.js';s.onload=s.onreadystatechange=function(){var rs=this.readyState;if(rs)if(rs!='complete')if(rs!='loaded')return;try{r15j7yku0dbtffn=new WufooForm();r15j7yku0dbtffn.initialize(options);r15j7yku0dbtffn.display();}catch(e){}};var scr=d.getElementsByTagName(t)[0],par=scr.parentNode;par.insertBefore(s,scr);})(document,'script');</script>
         </div>
     </div>
 </section>
@@ -828,28 +775,6 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
     </div>
 </footer>
 
-<script>
-        // Contact form validation
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-        e.preventDefault();
-        const required = this.querySelectorAll('[required]');
-        let valid = true;
-        required.forEach(field => {
-            if (!field.value.trim()) {
-                valid = false;
-                field.style.borderColor = '#dc3545';
-            } else {
-                field.style.borderColor = '#ddd';
-            }
-        });
-        if (valid) {
-            alert('Thank you for contacting Dean & Camper P.A. We will be in touch shortly.');
-            this.reset();
-        } else {
-            alert('Please fill in all required fields.');
-        }
-    });
-</script>
 
 
 <!-- ===== NAV MOBILE JS ===== -->
@@ -884,109 +809,16 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
             <button class="eval-modal-close" id="closeEvalModal" aria-label="Close">&times;</button>
         </div>
         <div class="eval-modal-body">
-            <div class="eval-success" id="evalSuccess">
-                <h4>&#10003; Request Received!</h4>
-                <p>Thank you. A member of our team will contact you shortly to discuss your case.</p>
-            </div>
-            <form id="evalForm" action="/submit-contact" method="POST" novalidate>
-                <div class="eval-form-grid">
-                    <div class="eval-form-group">
-                        <label for="eval-fname">First Name<span class="eval-required">*</span></label>
-                        <input type="text" id="eval-fname" name="first-name" required autocomplete="given-name">
-                    </div>
-                    <div class="eval-form-group">
-                        <label for="eval-lname">Last Name<span class="eval-required">*</span></label>
-                        <input type="text" id="eval-lname" name="last-name" required autocomplete="family-name">
-                    </div>
-                    <div class="eval-form-group">
-                        <label for="eval-phone">Phone Number<span class="eval-required">*</span></label>
-                        <input type="tel" id="eval-phone" name="phone" required autocomplete="tel" placeholder="(850) 000-0000">
-                    </div>
-                    <div class="eval-form-group">
-                        <label for="eval-email">Email Address<span class="eval-required">*</span></label>
-                        <input type="email" id="eval-email" name="email" required autocomplete="email" placeholder="you@example.com">
-                    </div>
-                    <div class="eval-form-group full">
-                        <label for="eval-case-type">Type of Case<span class="eval-required">*</span></label>
-                        <select id="eval-case-type" name="case-type" required>
-                            <option value="">Please select...</option>
-                            <option value="car-accident">Car Accident</option>
-                            <option value="truck-accident">Truck Accident</option>
-                            <option value="motorcycle-accident">Motorcycle Accident</option>
-                            <option value="boat-accident">Boat Accident</option>
-                            <option value="slip-fall">Slip and Fall</option>
-                            <option value="wrongful-death">Wrongful Death</option>
-                            <option value="dog-bite">Dog Bite</option>
-                            <option value="defective-product">Defective Product</option>
-                            <option value="insurance-claim">Auto Insurance Claim</option>
-                            <option value="other">Other Personal Injury</option>
-                        </select>
-                    </div>
-                    <div class="eval-form-group full">
-                        <label for="eval-office">Nearest Office</label>
-                        <select id="eval-office" name="office">
-                            <option value="">Select a location...</option>
-                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
-                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
-                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
-                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
-                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
-                        </select>
-                    </div>
-                    <div class="eval-form-group full">
-                        <label for="eval-message">Brief Description of Your Case<span class="eval-required">*</span></label>
-                        <textarea id="eval-message" name="message" required placeholder="Please describe what happened, where, and any injuries sustained..."></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="eval-submit-btn">Send My Free Claim Evaluation Request</button>
-                <p class="eval-form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
-            </form>
+            <p style="text-align:center;padding:2rem 1rem;font-family:'Work Sans',sans-serif;color:#0f1419;">
+                Please use the <a href="contact.html#contact-form" style="color:#1a2a6c;font-weight:600;">contact form on this page</a> to submit your inquiry, or call us directly 24/7:<br><br>
+                <a href="tel:+18504333077" style="display:block;margin:0.4rem auto;font-size:1.1rem;font-weight:700;color:#c8102e;">Pensacola: (850) 433-3077</a>
+                <a href="tel:+18507963077" style="display:block;margin:0.4rem auto;font-size:1.1rem;font-weight:700;color:#c8102e;">Ft. Walton Beach: (850) 796-3077</a>
+                <a href="tel:+18502697105" style="display:block;margin:0.4rem auto;font-size:1.1rem;font-weight:700;color:#c8102e;">Destin: (850) 269-7105</a>
+                <a href="tel:+12512830577" style="display:block;margin:0.4rem auto;font-size:1.1rem;font-weight:700;color:#c8102e;">Mobile: (251) 283-0577</a>
+            </p>
         </div>
     </div>
 </div>
 
-<script>
-(function () {
-    var overlay = document.getElementById('evalModalOverlay');
-    var closeBtn = document.getElementById('closeEvalModal');
-    var form = document.getElementById('evalForm');
-    var success = document.getElementById('evalSuccess');
-
-    function openModal() {
-        overlay.classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeModal() {
-        overlay.classList.remove('open');
-        document.body.style.overflow = '';
-    }
-
-    document.querySelectorAll('.openEvalModal').forEach(function(btn) {
-        btn.addEventListener('click', openModal);
-    });
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (overlay) overlay.addEventListener('click', function (e) {
-        if (e.target === overlay) closeModal();
-    });
-    document.addEventListener('keydown', function (e) {
-        if (e.key === 'Escape') closeModal();
-    });
-
-    if (form) {
-        form.addEventListener('submit', function (e) {
-            e.preventDefault();
-            var ok = true;
-            form.querySelectorAll('[required]').forEach(function (el) {
-                if (!el.value.trim()) {
-                    el.style.borderColor = '#dc3545'; ok = false;
-                } else { el.style.borderColor = ''; }
-            });
-            if (!ok) return;
-            form.style.display = 'none';
-            success.style.display = 'block';
-        });
-    }
-})();
-</script>
 </body>
 </html>
