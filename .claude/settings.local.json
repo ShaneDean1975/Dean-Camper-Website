@@ -61,7 +61,24 @@
       "Bash(awk 'NR>=644,NR<=705')",
       "WebFetch(domain:www.google.com)",
       "Bash(nslookup -type=NS deancamper.com 8.8.8.8)",
-      "Bash(identify /c/Users/User/Documents/GitHub/dean-camper-website/dean-camper-logo-new.png)"
+      "Bash(identify /c/Users/User/Documents/GitHub/dean-camper-website/dean-camper-logo-new.png)",
+      "Bash(file /tmp/claude/*)",
+      "Bash(# Check the 193x100 PNG temp file - might be the DC logo icon cp \"\"/tmp/4311bdae-4991-4811-a807-09246a851ab4.tmp\"\" \"\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\dc-check2.png\"\" # Also look in Claude app data for uploaded images find \"\"/c/Users/User/AppData/Roaming\"\" -name \"\"*.png\"\" -newer \"\"/tmp/Olktmp47.png\"\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\update-favicon.ps1\")",
+      "WebFetch(domain:nominatim.openstreetmap.org)",
+      "WebFetch(domain:geocoding.geo.census.gov)",
+      "WebFetch(domain:www.loopnet.com)",
+      "WebFetch(domain:geocode.maps.co)",
+      "WebFetch(domain:api.opencagedata.com)",
+      "WebFetch(domain:www.walkscore.com)",
+      "WebFetch(domain:www.destinfwb.com)",
+      "WebFetch(domain:clustrmaps.com)",
+      "WebFetch(domain:gis.myokaloosa.com)",
+      "WebFetch(domain:www.okaloosapa.com)",
+      "WebFetch(domain:qpublic.schneidercorp.com)",
+      "WebFetch(domain:www.realty.com)",
+      "Bash(node \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\add-geo.js\")",
+      "Bash(node \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\verify-geo.js\")"
     ]
   }
 }
