@@ -60,7 +60,8 @@
       "Bash(awk 'NR>=824,NR<=870')",
       "Bash(awk 'NR>=644,NR<=705')",
       "WebFetch(domain:www.google.com)",
-      "Bash(nslookup -type=NS deancamper.com 8.8.8.8)"
+      "Bash(nslookup -type=NS deancamper.com 8.8.8.8)",
+      "Bash(identify /c/Users/User/Documents/GitHub/dean-camper-website/dean-camper-logo-new.png)"
     ]
   }
 }
