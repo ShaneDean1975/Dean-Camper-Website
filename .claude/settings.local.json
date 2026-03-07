@@ -52,7 +52,13 @@
       "Bash(curl -L -o _at100_logo1_check.png \"https://www.americastop100attorneys.com/wp-content/uploads/2016/07/logo-1.png\")",
       "Bash(curl -L -o _at100_logo_check.png \"https://www.americastop100attorneys.com/wp-content/uploads/2016/07/logo.png\")",
       "Bash(curl -L -o \"ntl_top100_badge.png\" \"https://thenationaltriallawyers.org/wp-content/uploads/6c4377eb-a009-43e3-b07a-7a2b5595a9c4_medium.png\")",
-      "Bash(curl -L -o \"americas_top100_attorneys.png\" \"https://www.americastop100attorneys.com/wp-content/uploads/2016/07/logo-1.png\")"
+      "Bash(curl -L -o \"americas_top100_attorneys.png\" \"https://www.americastop100attorneys.com/wp-content/uploads/2016/07/logo-1.png\")",
+      "Bash(awk 'NR>=764' truck-accident-injuries.html)",
+      "Bash(awk 'NR>=706' shane-dean.html)",
+      "Bash(awk 'NR>=712' chad-camper.html)",
+      "Bash(awk 'NR>=640,NR<=700' contact.html)",
+      "Bash(awk 'NR>=824,NR<=870')",
+      "Bash(awk 'NR>=644,NR<=705')"
     ]
   }
 }
