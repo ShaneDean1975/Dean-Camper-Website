@@ -464,10 +464,76 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
 <section class="page-hero">
     <h1>Office Locations</h1>
     <p>Five convenient Gulf Coast office locations ready to serve you.</p>
-    <button class="btn-primary openEvalModal" style="margin-top:1.5rem;">Request Free Claim Evaluation Online Now</button>
 </section>
 
-
+<!-- ===== CONTACT FORM ===== -->
+<section class="form-section">
+    <div class="form-inner">
+        <div class="section-header">
+            <h2>Request a Free Consultation</h2>
+            <p>Fill out the form below and a member of our team will contact you within one business day. For urgent matters, call us directly 24/7.</p>
+            <div class="section-divider"></div>
+        </div>
+        <div class="form-card">
+            <form id="contact-form" novalidate>
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label for="first-name">First Name<span class="required-star" aria-label="required">*</span></label>
+                        <input type="text" id="first-name" name="first-name" required aria-required="true" autocomplete="given-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="last-name">Last Name<span class="required-star" aria-label="required">*</span></label>
+                        <input type="text" id="last-name" name="last-name" required aria-required="true" autocomplete="family-name">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone Number<span class="required-star" aria-label="required">*</span></label>
+                        <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" placeholder="(850) 000-0000">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address<span class="required-star" aria-label="required">*</span></label>
+                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="you@example.com">
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="office">Nearest Office</label>
+                        <select id="office" name="office">
+                            <option value="">Select a location...</option>
+                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
+                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
+                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
+                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
+                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="case-type">Type of Case<span class="required-star" aria-label="required">*</span></label>
+                        <select id="case-type" name="case-type" required aria-required="true">
+                            <option value="">Please select...</option>
+                            <option value="car-accident">Car Accident</option>
+                            <option value="truck-accident">Truck Accident</option>
+                            <option value="motorcycle-accident">Motorcycle Accident</option>
+                            <option value="boat-accident">Boat Accident</option>
+                            <option value="slip-fall">Slip and Fall</option>
+                            <option value="wrongful-death">Wrongful Death</option>
+                            <option value="dog-bite">Dog Bite</option>
+                            <option value="defective-product">Defective Product</option>
+                            <option value="insurance-claim">Auto Insurance Claim</option>
+                            <option value="other">Other Personal Injury</option>
+                        </select>
+                    </div>
+                    <div class="form-group full-width">
+                        <label for="message">Brief Description of Your Case<span class="required-star" aria-label="required">*</span></label>
+                        <textarea id="message" name="message" required aria-required="true" placeholder="Please describe what happened and where, and any injuries you sustained..."></textarea>
+                    </div>
+                </div>
+                <iframe name="wufoo-contact-frame" style="display:none;" title=""></iframe>
+                <div class="submit-row">
+                    <button type="submit" class="btn-submit">Send My Free Consultation Request</button>
+                </div>
+                <p class="form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
+            </form>
+        </div>
+    </div>
+</section>
 
 <!-- ===== OFFICE LOCATIONS ===== -->
 <section class="offices-section">
@@ -629,75 +695,6 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
         <span class="hero-badge">&#128197; Evening &amp; Weekend Appointments</span>
         <span class="hero-badge">&#127968; Home &amp; Hospital Visits</span>
         <span class="hero-badge">&#127757; Si Habla Espa&ntilde;ol</span>
-    </div>
-</section>
-
-<!-- ===== CONTACT FORM ===== -->
-<section class="form-section">
-    <div class="form-inner">
-        <div class="section-header">
-            <h2>Request a Free Consultation</h2>
-            <p>Fill out the form below and a member of our team will contact you within one business day. For urgent matters, call us directly 24/7.</p>
-            <div class="section-divider"></div>
-        </div>
-        <div class="form-card">
-            <form id="contact-form" novalidate>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="first-name">First Name<span class="required-star" aria-label="required">*</span></label>
-                        <input type="text" id="first-name" name="first-name" required aria-required="true" autocomplete="given-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name<span class="required-star" aria-label="required">*</span></label>
-                        <input type="text" id="last-name" name="last-name" required aria-required="true" autocomplete="family-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number<span class="required-star" aria-label="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" placeholder="(850) 000-0000">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address<span class="required-star" aria-label="required">*</span></label>
-                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="you@example.com">
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="office">Nearest Office</label>
-                        <select id="office" name="office">
-                            <option value="">Select a location...</option>
-                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
-                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
-                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
-                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
-                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="case-type">Type of Case<span class="required-star" aria-label="required">*</span></label>
-                        <select id="case-type" name="case-type" required aria-required="true">
-                            <option value="">Please select...</option>
-                            <option value="car-accident">Car Accident</option>
-                            <option value="truck-accident">Truck Accident</option>
-                            <option value="motorcycle-accident">Motorcycle Accident</option>
-                            <option value="boat-accident">Boat Accident</option>
-                            <option value="slip-fall">Slip and Fall</option>
-                            <option value="wrongful-death">Wrongful Death</option>
-                            <option value="dog-bite">Dog Bite</option>
-                            <option value="defective-product">Defective Product</option>
-                            <option value="insurance-claim">Auto Insurance Claim</option>
-                            <option value="other">Other Personal Injury</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="message">Brief Description of Your Case<span class="required-star" aria-label="required">*</span></label>
-                        <textarea id="message" name="message" required aria-required="true" placeholder="Please describe what happened and where, and any injuries you sustained..."></textarea>
-                    </div>
-                </div>
-                <iframe name="wufoo-contact-frame" style="display:none;" title=""></iframe>
-                <div class="submit-row">
-                    <button type="submit" class="btn-submit">Send My Free Consultation Request</button>
-                </div>
-                <p class="form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
-            </form>
-        </div>
     </div>
 </section>
 
