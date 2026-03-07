@@ -638,63 +638,36 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
             <p>Fill out the form below and a member of our team will contact you within one business day. For urgent matters, call us directly 24/7.</p>
             <div class="section-divider"></div>
         </div>
-        <div class="form-card">
-            <form id="contact-form" novalidate>
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label for="first-name">First Name<span class="required-star" aria-label="required">*</span></label>
-                        <input type="text" id="first-name" name="first-name" required aria-required="true" autocomplete="given-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="last-name">Last Name<span class="required-star" aria-label="required">*</span></label>
-                        <input type="text" id="last-name" name="last-name" required aria-required="true" autocomplete="family-name">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Phone Number<span class="required-star" aria-label="required">*</span></label>
-                        <input type="tel" id="phone" name="phone" required aria-required="true" autocomplete="tel" placeholder="(850) 000-0000">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email Address<span class="required-star" aria-label="required">*</span></label>
-                        <input type="email" id="email" name="email" required aria-required="true" autocomplete="email" placeholder="you@example.com">
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="office">Nearest Office</label>
-                        <select id="office" name="office">
-                            <option value="">Select a location...</option>
-                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
-                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
-                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
-                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
-                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="case-type">Type of Case<span class="required-star" aria-label="required">*</span></label>
-                        <select id="case-type" name="case-type" required aria-required="true">
-                            <option value="">Please select...</option>
-                            <option value="car-accident">Car Accident</option>
-                            <option value="truck-accident">Truck Accident</option>
-                            <option value="motorcycle-accident">Motorcycle Accident</option>
-                            <option value="boat-accident">Boat Accident</option>
-                            <option value="slip-fall">Slip and Fall</option>
-                            <option value="wrongful-death">Wrongful Death</option>
-                            <option value="dog-bite">Dog Bite</option>
-                            <option value="defective-product">Defective Product</option>
-                            <option value="insurance-claim">Auto Insurance Claim</option>
-                            <option value="other">Other Personal Injury</option>
-                        </select>
-                    </div>
-                    <div class="form-group full-width">
-                        <label for="message">Brief Description of Your Case<span class="required-star" aria-label="required">*</span></label>
-                        <textarea id="message" name="message" required aria-required="true" placeholder="Please describe what happened and where, and any injuries you sustained..."></textarea>
-                    </div>
-                </div>
-                <iframe name="wufoo-contact-frame" style="display:none;" title=""></iframe>
-                <div class="submit-row">
-                    <button type="submit" class="btn-submit">Send My Free Consultation Request</button>
-                </div>
-                <p class="form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
-            </form>
+        <div class="form-card" style="padding:2rem;">
+            <div id="wufoo-m74gl3m04x9cfz">Fill out my <a href="https://deancamper.wufoo.com/forms/m74gl3m04x9cfz">online form</a>.</div>
+            <script type="text/javascript">
+                var m74gl3m04x9cfz;
+                (function(d, t) {
+                    var s = d.createElement(t), options = {
+                        'userName':   'deancamper',
+                        'formHash':   'm74gl3m04x9cfz',
+                        'autoResize': true,
+                        'height':     '600',
+                        'async':      true,
+                        'host':       'wufoo.com',
+                        'header':     'show',
+                        'ssl':        true
+                    };
+                    s.src = ('https:' == d.location.protocol ? 'https://' : 'http://') + 'secure.wufoo.com/scripts/embed/form.js';
+                    s.onload = s.onreadystatechange = function() {
+                        var rs = this.readyState;
+                        if (rs) if (rs != 'complete') if (rs != 'loaded') return;
+                        try {
+                            m74gl3m04x9cfz = new WufooForm();
+                            m74gl3m04x9cfz.initialize(options);
+                            m74gl3m04x9cfz.display();
+                        } catch (e) {}
+                    };
+                    var scr = d.getElementsByTagName(t)[0], par = scr.parentNode;
+                    par.insertBefore(s, scr);
+                })(document, 'script');
+            </script>
+            <p class="form-note" style="margin-top:1rem;">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
         </div>
     </div>
 </section>
@@ -835,65 +808,14 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
             <p>No fees unless we win &mdash; confidential &amp; protected by attorney-client privilege</p>
             <button class="eval-modal-close" id="closeEvalModal" aria-label="Close">&times;</button>
         </div>
-                <div class="eval-modal-body">
-            <div class="eval-success" id="evalSuccess">
-                <h4>&#10003; Request Received!</h4>
-                <p>Thank you. A member of our team will contact you shortly to discuss your case.</p>
-            </div>
-            <form id="evalForm" novalidate>
-                <div class="eval-form-grid">
-                    <div class="eval-form-group">
-                        <label for="eval-fname">First Name<span class="eval-required">*</span></label>
-                        <input type="text" id="eval-fname" name="first-name" required autocomplete="given-name">
-                    </div>
-                    <div class="eval-form-group">
-                        <label for="eval-lname">Last Name<span class="eval-required">*</span></label>
-                        <input type="text" id="eval-lname" name="last-name" required autocomplete="family-name">
-                    </div>
-                    <div class="eval-form-group">
-                        <label for="eval-phone">Phone Number<span class="eval-required">*</span></label>
-                        <input type="tel" id="eval-phone" name="phone" required autocomplete="tel" placeholder="(850) 000-0000">
-                    </div>
-                    <div class="eval-form-group">
-                        <label for="eval-email">Email Address<span class="eval-required">*</span></label>
-                        <input type="email" id="eval-email" name="email" required autocomplete="email" placeholder="you@example.com">
-                    </div>
-                    <div class="eval-form-group full">
-                        <label for="eval-case-type">Type of Case<span class="eval-required">*</span></label>
-                        <select id="eval-case-type" name="case-type" required>
-                            <option value="">Please select...</option>
-                            <option value="car-accident">Car Accident</option>
-                            <option value="truck-accident">Truck Accident</option>
-                            <option value="motorcycle-accident">Motorcycle Accident</option>
-                            <option value="boat-accident">Boat Accident</option>
-                            <option value="slip-fall">Slip and Fall</option>
-                            <option value="wrongful-death">Wrongful Death</option>
-                            <option value="dog-bite">Dog Bite</option>
-                            <option value="defective-product">Defective Product</option>
-                            <option value="insurance-claim">Auto Insurance Claim</option>
-                            <option value="other">Other Personal Injury</option>
-                        </select>
-                    </div>
-                    <div class="eval-form-group full">
-                        <label for="eval-office">Nearest Office</label>
-                        <select id="eval-office" name="office">
-                            <option value="">Select a location...</option>
-                            <option value="pensacola">Pensacola, FL &mdash; (850) 433-3077</option>
-                            <option value="fwb">Fort Walton Beach, FL &mdash; (850) 796-3077</option>
-                            <option value="destin">Destin, FL &mdash; (850) 269-7105</option>
-                            <option value="crestview">Crestview, FL &mdash; (850) 796-3077</option>
-                            <option value="mobile">Mobile, AL &mdash; (251) 283-0577</option>
-                        </select>
-                    </div>
-                    <div class="eval-form-group full">
-                        <label for="eval-message">Brief Description of Your Case<span class="eval-required">*</span></label>
-                        <textarea id="eval-message" name="message" required placeholder="Please describe what happened, where, and any injuries sustained..."></textarea>
-                    </div>
-                </div>
-                <button type="submit" class="eval-submit-btn">Send My Free Claim Evaluation Request</button>
-                <p class="eval-form-note">&#128274; Your information is confidential and protected by attorney-client privilege. No fees unless we win.</p>
-            </form>
-            <iframe name="wufoo-eval-frame" style="display:none;" title=""></iframe>
+                <div class="eval-modal-body" style="padding:0;">
+            <iframe
+                src="https://deancamper.wufoo.com/forms/m74gl3m04x9cfz/"
+                title="Free Claim Evaluation Form"
+                style="width:100%; min-height:600px; border:none; display:block;"
+                loading="lazy"
+                allowfullscreen>
+            </iframe>
         </div>
     </div>
 </div>
@@ -902,8 +824,6 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
 (function () {
     var overlay = document.getElementById('evalModalOverlay');
     var closeBtn = document.getElementById('closeEvalModal');
-    var form = document.getElementById('evalForm');
-    var success = document.getElementById('evalSuccess');
 
     function openModal() { overlay.classList.add('open'); document.body.style.overflow = 'hidden'; }
     function closeModal() { overlay.classList.remove('open'); document.body.style.overflow = ''; }
@@ -914,72 +834,7 @@ footer { background: #050F1C; color: rgba(255,255,255,0.75); padding: 2rem 2rem 
     if (closeBtn) closeBtn.addEventListener('click', closeModal);
     if (overlay) overlay.addEventListener('click', function(e) { if (e.target === overlay) closeModal(); });
     document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeModal(); });
-
-    if (form) {
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var ok = true;
-            form.querySelectorAll('[required]').forEach(function(el) {
-                if (!el.value.trim()) { el.style.borderColor = '#dc3545'; ok = false; }
-                else { el.style.borderColor = ''; }
-            });
-            if (!ok) return;
-
-            // Post to Wufoo via hidden iframe so user stays on page
-            fetch('/api/submit-form', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    Field1:  document.getElementById('eval-fname').value,
-                    Field2:  document.getElementById('eval-lname').value,
-                    Field3:  document.getElementById('eval-phone').value,
-                    Field4:  document.getElementById('eval-email').value,
-                    Field6:  document.getElementById('eval-case-type').value,
-                    Field8:  document.getElementById('eval-office').value,
-                    Field10: document.getElementById('eval-message').value
-                })
-            });
-
-            form.style.display = 'none';
-            success.style.display = 'block';
-        });
-    }
 })();
-</script>
-
-<!-- ===== NAV MOBILE JS ===== -->
-<script>
-    (function() {
-        var form = document.getElementById('contact-form');
-        if (!form) return;
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            var ok = true;
-            form.querySelectorAll('[required]').forEach(function(el) {
-                if (!el.value.trim()) { el.style.borderColor = '#dc3545'; ok = false; }
-                else { el.style.borderColor = ''; }
-            });
-            if (!ok) { alert('Please fill in all required fields.'); return; }
-
-            // Post to Wufoo via hidden iframe so user stays on page
-            fetch('/api/submit-form', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    Field1:  document.getElementById('first-name').value,
-                    Field2:  document.getElementById('last-name').value,
-                    Field3:  document.getElementById('phone').value,
-                    Field4:  document.getElementById('email').value,
-                    Field6:  document.getElementById('case-type').value,
-                    Field8:  document.getElementById('office').value,
-                    Field10: document.getElementById('message').value
-                })
-            });
-
-            alert('Thank you for contacting Dean & Camper P.A. We will be in touch shortly.');
-            form.reset();
-        });
-    })();
 </script>
 
 
