@@ -1363,6 +1363,106 @@
             .site-dropdown>a{touch-action:manipulation!important;}
         }
 
+        /* ===== TESTIMONIALS ===== */
+        .testimonials {
+            padding: 60px 0 50px;
+            background: #f5f8fa;
+        }
+        .testimonials .section-header { padding: 0 40px; }
+        .testimonials-scroll-wrap {
+            overflow: hidden;
+            margin-top: 24px;
+            position: relative;
+        }
+        .testimonials-scroll-wrap::before,
+        .testimonials-scroll-wrap::after {
+            content: '';
+            position: absolute;
+            top: 0; bottom: 0;
+            width: 80px;
+            z-index: 2;
+            pointer-events: none;
+        }
+        .testimonials-scroll-wrap::before { left: 0; background: linear-gradient(to right, #f5f8fa, transparent); }
+        .testimonials-scroll-wrap::after  { right: 0; background: linear-gradient(to left, #f5f8fa, transparent); }
+        .testimonials-track {
+            display: inline-flex;
+            gap: 20px;
+            padding: 10px 30px 20px;
+            animation: testimonialsScroll 50s linear infinite;
+            white-space: nowrap;
+        }
+        .testimonials-track:hover { animation-play-state: paused; }
+        @keyframes testimonialsScroll {
+            0%   { transform: translateX(0); }
+            100% { transform: translateX(-50%); }
+        }
+        .testimonial-card {
+            background: #fff;
+            padding: 26px 28px;
+            border-radius: 12px;
+            border: 1px solid rgba(10,31,61,0.09);
+            box-shadow: 0 4px 18px rgba(0,0,0,0.06);
+            transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+            flex-shrink: 0;
+            width: 340px;
+            display: inline-flex;
+            flex-direction: column;
+            white-space: normal;
+            vertical-align: top;
+            cursor: default;
+        }
+        .testimonial-card:hover {
+            border-color: #D4AF37;
+            box-shadow: 0 8px 30px rgba(0,0,0,0.11);
+            transform: translateY(-3px);
+        }
+        .testimonial-stars { color: #F5A623; font-size: 1.05rem; letter-spacing: 2px; margin-bottom: 14px; }
+        .testimonial-text {
+            font-size: 0.95rem;
+            line-height: 1.65;
+            color: #0f1419;
+            font-style: italic;
+            flex: 1;
+            margin-bottom: 18px;
+        }
+        .testimonial-text::before { content: '\201C'; }
+        .testimonial-text::after  { content: '\201D'; }
+        .testimonial-footer { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
+        .testimonial-author { font-weight: 700; font-size: 0.88rem; color: #1a2a6c; }
+        .testimonial-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            font-size: 0.75rem;
+            color: #5a6978;
+            font-weight: 500;
+            flex-shrink: 0;
+        }
+        .google-g {
+            width: 18px; height: 18px;
+            border-radius: 50%;
+            background: #fff;
+            border: 1.5px solid #dadce0;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            font-style: normal;
+            color: #4285F4;
+            flex-shrink: 0;
+        }
+        .testimonials-footer-note {
+            text-align: center;
+            margin-top: 28px;
+            padding: 0 40px;
+            font-size: 0.85rem;
+            color: #5a6978;
+        }
+        .testimonials-footer-note a { color: #1a2a6c; font-weight: 600; text-decoration: none; }
+        .testimonials-footer-note a:hover { text-decoration: underline; }
+
     </style>
 </head>
 <body>
@@ -1780,6 +1880,135 @@
             <a href="tel:+12512830577" class="location-phone" onclick="event.stopPropagation()">(251) 283-0577</a>
         </div>
     </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="testimonials">
+    <div class="section-header">
+        <h2 class="section-title">What Our Clients Say</h2>
+        <p class="section-subtitle">Real Google reviews from real Gulf Coast clients. Over 50 five-star ratings and counting.</p>
+    </div>
+
+    <div class="testimonials-scroll-wrap">
+        <div class="testimonials-track">
+
+            <!-- === Set 1 === -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Shane is fantastic! He. Does. Not. Sleep. Works his tail off to take care of his clients. I recommend him to everyone.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Attorney Ryan</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">I used Shane for a car accident I was involved in. He got me more money than I thought I would get and I feel like he represented me fantastic! I wouldn't hesitate to use him again or refer him.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Crystal Eaves</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">These are the attorneys you want on your side! My settlement was much larger than I expected, every call and email I sent was promptly returned. My Attorney, Shane Dean, was excellent to work with.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Lisa</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Every one at the firm was extremely helpful throughout the whole process. They explained everything in detail and made sure to keep me updated! I highly recommend; they were great to work with!</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Courtney Pierce</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Such an amazing team! They worked relentlessly to get me a settlement and never gave up! Chad was always 100% honest and always gave me the choice on any decision regarding the case. Truly an amazing attorney.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Chelsea Highfield</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Shane Dean seen my case through, thoroughly advised me along the way, promptly returned my calls from start to finish, &amp; it felt more like I had a friend on my side sticking up for me!</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Janice Vinyard</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <!-- === Set 2 — duplicate for seamless loop === -->
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Shane is fantastic! He. Does. Not. Sleep. Works his tail off to take care of his clients. I recommend him to everyone.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Attorney Ryan</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">I used Shane for a car accident I was involved in. He got me more money than I thought I would get and I feel like he represented me fantastic! I wouldn't hesitate to use him again or refer him.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Crystal Eaves</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">These are the attorneys you want on your side! My settlement was much larger than I expected, every call and email I sent was promptly returned. My Attorney, Shane Dean, was excellent to work with.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Lisa</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Every one at the firm was extremely helpful throughout the whole process. They explained everything in detail and made sure to keep me updated! I highly recommend; they were great to work with!</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Courtney Pierce</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Such an amazing team! They worked relentlessly to get me a settlement and never gave up! Chad was always 100% honest and always gave me the choice on any decision regarding the case. Truly an amazing attorney.</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Chelsea Highfield</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="testimonial-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="testimonial-text">Shane Dean seen my case through, thoroughly advised me along the way, promptly returned my calls from start to finish, &amp; it felt more like I had a friend on my side sticking up for me!</p>
+                <div class="testimonial-footer">
+                    <span class="testimonial-author">Janice Vinyard</span>
+                    <span class="testimonial-badge"><i class="google-g">G</i> Google Review</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <p class="testimonials-footer-note">
+        &#11088; Over 50 five-star Google reviews &mdash;
+        <a href="https://www.google.com/search?q=Dean+%26+Camper+P.A.+Pensacola" target="_blank" rel="noopener">Read all reviews on Google</a>
+    </p>
 </section>
 
 <!-- ===== CONTACT CTA ===== -->
