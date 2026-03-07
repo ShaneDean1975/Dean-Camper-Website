@@ -58,7 +58,8 @@
       "Bash(awk 'NR>=712' chad-camper.html)",
       "Bash(awk 'NR>=640,NR<=700' contact.html)",
       "Bash(awk 'NR>=824,NR<=870')",
-      "Bash(awk 'NR>=644,NR<=705')"
+      "Bash(awk 'NR>=644,NR<=705')",
+      "WebFetch(domain:www.google.com)"
     ]
   }
 }
