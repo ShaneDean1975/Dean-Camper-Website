@@ -82,7 +82,19 @@
       "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\fix-phone-emoji.ps1\")",
       "Bash(node \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\add-insurance-section.js\")",
       "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\condense-modal.ps1\":*)",
-      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\condense-modal.ps1\")"
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\condense-modal.ps1\")",
+      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-hero-imgs.ps1\":*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-hero-imgs.ps1\")",
+      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-hero-imgs2.ps1\":*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-hero-imgs2.ps1\")",
+      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-all-imgs.ps1\":*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-all-imgs.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-bg-imgs.ps1\")",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-all-imgs3.ps1\")",
+      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-post-badge-imgs.ps1\":*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\find-post-badge-imgs.ps1\")",
+      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\reduce-photo-height.ps1\":*)",
+      "Bash(powershell -ExecutionPolicy Bypass -File \"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\reduce-photo-height.ps1\")"
     ]
   }
 }
