@@ -105,7 +105,8 @@
       "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\copy-imgs.ps1\":*)",
       "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\fix-emoji-red.ps1\":*)",
       "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\fix-office-dropdown.ps1\":*)",
-      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\condense-attorney-pages.ps1\":*)"
+      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\condense-attorney-pages.ps1\":*)",
+      "Bash(\"C:\\\\Users\\\\User\\\\Documents\\\\GitHub\\\\dean-camper-website\\\\fix-dropdown-singular.ps1\":*)"
     ]
   }
 }
